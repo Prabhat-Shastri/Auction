@@ -19,7 +19,7 @@ public class DBConnection {
     "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
-        Class.forName("org.sqlite.JDBC");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(URL, USER, PASS); 
     }
 
