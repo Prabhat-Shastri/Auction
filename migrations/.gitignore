@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files (never commit passwords)
+.env
+.env.local
+.env.*.local
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Lock files (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

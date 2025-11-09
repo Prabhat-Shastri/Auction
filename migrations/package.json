@@ -1,0 +1,12 @@
+{
+    "name": "buyme-migrations",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "migrate": "node migrate.js"
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3",
+        "mysql2": "^3.11.0"
+    }
+}
