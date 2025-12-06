@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <% if (session.getAttribute("username")==null) { response.sendRedirect("../LoginPage/login.jsp"); return; } %>
+<%@ page import="java.time.LocalDate" %>
+    <%
+        if (session.getAttribute("username") == null) {
+            response.sendRedirect("../LoginPage/login.jsp");
+            return;
+
+        }
+        LocalDate today = LocalDate.now();
+    %>
         <!DOCTYPE html>
         <html>
 
@@ -8,7 +16,7 @@
         </head>
 
         <body>
-<h3>User: <%= session.getAttribute("username") %></h3>
+<h3>User: <%=session.getAttribute("username")%></h3>
             <h1>Welcome to Thrift Shop</h1>
 
             <nav>
@@ -26,12 +34,14 @@
 
         <body>
             <script>
+
                 document.addEventListener("DOMContentLoaded", function () {
                     // Search Form Toggling
                     document.getElementById('searchTypeSelect').addEventListener("change", function () {
                         const value = this.value;
                         const forms = ['searchFormTops', 'searchFormBottoms', 'searchFormShoes', 'searchFormAny'];
                         const buttons = ['searchTopSubmit', 'searchBottomSubmit', 'searchShoeSubmit', 'searchAnySubmit'];
+
 
                         forms.forEach(id => {
                             const el = document.getElementById(id);
@@ -268,7 +278,7 @@
                         <label>Shoe Size: </label>
                         <select name="searchShoeSize">
                             <option value="" selected>Any Size</option>
-                            <% for(int i=1; i<=23; i++) { %>
+                            <% for (int i = 1; i <= 23; i++) { %>
                 <option value="<%=i%>"><%=i%></option>
                                 <% } %>
                         </select>
@@ -306,7 +316,6 @@
                 </select>
             </div>
 
-            <!-- create auction forms (same as your original, not changed) -->
             <form action="tops.jsp" method="POST">
                 <div id="auctionFillOutFormTops" style="display: none;">
                     <label for="topGender">Gender: </label>
@@ -355,9 +364,9 @@
                     <label for="Minimum">Minimum Bid Price (USD): </label>
                     <input type="number" min="0" name="Minimum" id="MinimumBidConditionTop" required>
                     <label for="StartingOrCurrentBidPrice">Starting Bid Price(USD): </label>
-        <input type="number" min="0" name="StartingOrCurrentBidPrice" id="StartingOrCurrentBidPriceTop" required>
+                    <input type="number" min="0" name="StartingOrCurrentBidPrice" id="StartingOrCurrentBidPriceTop" required>
                     <label for="AuctionCloseDateTops">Auction Close Date: </label>
-                    <input type="date" name="AuctionCloseDateTops" id="AuctionCloseTopsDate" required>
+                    <input type="date" name="AuctionCloseDateTops" id="AuctionCloseTopsDate" required min="<%=today%>">
                     <label for="AuctionCloseTime">Auction Close Time: </label>
                     <input type="time" name="AuctionCloseTimeTops" id="AuctionCloseTopsTime" required>
                 </div>
@@ -416,7 +425,7 @@
                     <label for="Minimum">Minimum Bid Price (USD): </label>
                     <input type="number" min="0" name="Minimum" id="MinimumBidConditionBottom">
                     <label for="AuctionCloseDateBottoms">Auction Close Date: </label>
-                    <input type="date" name="AuctionCloseDateBottoms" id="AuctionCloseBottomsDate">
+                    <input type="date" name="AuctionCloseDateBottoms" id="AuctionCloseBottomsDate" min="<%=today%>">
                     <label for="AuctionCloseTimeBottoms">Auction Close Time: </label>
                     <input type="time" name="AuctionCloseTimeBottoms" id="AuctionCloseBottomsTime">
                 </div>
@@ -481,7 +490,7 @@
                     <label for="Minimum">Minimum Bid Price (USD): </label>
                     <input type="number" min="0" name="Minimum" id="MinimumBidConditionShoe">
                     <label for="AuctionCloseDateShoes">Auction Close Date: </label>
-                    <input type="date" name="AuctionCloseDateShoes" id="AuctionCloseShoesDate">
+                    <input type="date" name="AuctionCloseDateShoes" id="AuctionCloseShoesDate" min="<%=today%>">
                     <label for="AuctionCloseTimeShoes">Auction Close Time: </label>
                     <input type="time" name="AuctionCloseTimeShoes" id="AuctionCloseShoesDate">
                 </div>

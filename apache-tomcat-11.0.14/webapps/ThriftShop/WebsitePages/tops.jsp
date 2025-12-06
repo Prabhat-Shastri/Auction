@@ -2,17 +2,22 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+<%@ page import="java.time.LocalDate,java.time.LocalTime,java.time.LocalDateTime" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%
-    // use new MySQL driver
+    // load MySQL driver
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection con = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/thriftShop","root", "12345");
     Statement st = con.createStatement();
 
+    // check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
     }
+
     out.println("<h3>User: " + session.getAttribute("username") + "</h3>");
     out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
     out.println("<br/>This is the Tops page<br/><br/>");
@@ -88,13 +93,43 @@
     }
 
     function placeBid(counter) {
-        // handled by bidPage.jsp on submit
+        // submit handled by bidPage.jsp
     }
 </script>
 
 <%
+    // handle new top auction submit
     String gender = request.getParameter("topGender");
     if (gender != null) {
+
+        // read date and time
+        String dateStr = request.getParameter("AuctionCloseDateTops");
+        String timeStr = request.getParameter("AuctionCloseTimeTops");
+
+        if (dateStr == null || timeStr == null ||
+                dateStr.isEmpty() || timeStr.isEmpty()) {
+
+            out.println("<p style='color:red'>Error. Auction close date or time is missing.</p>");
+            out.println("<a href='../WebsitePages/mainPage.jsp'>Go back to Main Page</a>");
+            st.close();
+            con.close();
+            return;
+        }
+
+        LocalDate closeDate = LocalDate.parse(dateStr);
+        LocalTime closeTime = LocalTime.parse(timeStr);
+        LocalDateTime closeDateTime = LocalDateTime.of(closeDate, closeTime);
+        LocalDateTime now = LocalDateTime.now();
+
+        if (closeDateTime.isBefore(now)) {
+            out.println("<p style='color:red'>Auction close date and time cannot be in the past.</p>");
+            out.println("<a href='../WebsitePages/mainPage.jsp'>Go back to Main Page</a>");
+            st.close();
+            con.close();
+            return;
+        }
+
+        // date and time are ok, read rest of fields
         Integer userIdValue = (Integer) session.getAttribute("userIdValue");
         String size = request.getParameter("topSize");
         String color = request.getParameter("topColor");
@@ -105,8 +140,9 @@
         String condition = request.getParameter("Condition");
         String minimum = request.getParameter("Minimum");
         String startingorcurrentbidprice = request.getParameter("StartingOrCurrentBidPrice");
-        String auctionclosedate = request.getParameter("AuctionCloseDateTops");
-        String auctionclosetime = request.getParameter("AuctionCloseTimeTops");
+
+        String auctionclosedate = dateStr;
+        String auctionclosetime = timeStr;
 
         if (minimum == null || minimum.isEmpty()) {
             minimum = "0.0";
@@ -150,7 +186,7 @@
         String auctionCloseDateValueDisplay = rs.getString("auctionCloseDateValue");
         String auctionCloseTimeValueDisplay = rs.getString("auctionCloseTimeValue");
 
-       out.println("<div>");
+        out.println("<div>");
         out.println("<p><strong>Seller:</strong> " + sellerUsername + "</p>");
         out.println("<p><strong>Gender:</strong> " + genderValueDisplay + "</p>");
         out.println("<p><strong>Size:</strong> " + sizeValueDisplay + "</p>");
@@ -160,6 +196,7 @@
         out.println("<p><strong>Sleeve Length:</strong> " + sleeveLengthValueDisplay + "</p>");
         out.println("<p><strong>Description:</strong> " + descriptionValueDisplay + "</p>");
         out.println("<p><strong>Condition:</strong> " + conditionValueDisplay + "</p>");
+
         if (minimumBidPriceValueDisplay != 0.0f) {
             out.println("<p><strong>Minimum Bid Price: </strong>" + minimumBidPriceValueDisplay + "</p>");
         } else {
@@ -190,9 +227,11 @@
         out.println("<input type='submit' value='Place Bid' onclick='placeBid(" + counter +")' id='TopPlaceBid" + counter + "' style='display: none;'>");
         out.println("</form>");
         out.println("</div>");
+
         counter++;
     }
 
+    // show alerts from bidPage.jsp
     String alertMessage = (String) session.getAttribute("alertMessage");
     if (alertMessage != null) {
         session.removeAttribute("alertMessage");
