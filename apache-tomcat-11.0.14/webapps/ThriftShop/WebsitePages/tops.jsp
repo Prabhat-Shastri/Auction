@@ -3,8 +3,10 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
 <%
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "12345");
+    // use new MySQL driver
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/thriftShop","root", "12345");
     Statement st = con.createStatement();
 
     if (session.getAttribute("username") == null) {
@@ -17,7 +19,6 @@
 
     int counter = 0;
 %>
-
 
 <script>
     function createBid(counter) {
@@ -49,7 +50,7 @@
 
         const value = SetAutomaticBid.value;
 
-        if(value === 'true') {
+        if (value === 'true') {
             SetAutomaticBidPriceLabel.style.display = 'block';
             SetAutomaticBidPrice.style.display = 'block';
             SetAutomaticBidIncrementPriceLabel.style.display = 'block';
@@ -87,16 +88,13 @@
     }
 
     function placeBid(counter) {
-
+        // handled by bidPage.jsp on submit
     }
 </script>
 
-</script>
-
 <%
-
     String gender = request.getParameter("topGender");
-    if(gender != null) {
+    if (gender != null) {
         Integer userIdValue = (Integer) session.getAttribute("userIdValue");
         String size = request.getParameter("topSize");
         String color = request.getParameter("topColor");
@@ -110,52 +108,72 @@
         String auctionclosedate = request.getParameter("AuctionCloseDateTops");
         String auctionclosetime = request.getParameter("AuctionCloseTimeTops");
 
-        if(minimum != null && !minimum.isEmpty() && !minimum.equals("0.0")) {
-            String insertTopInformation = "insert into tops (auctionSellerIdValue, genderValue, sizeValue, colorValue, frontLengthValue, chestLengthValue, sleeveLengthValue, descriptionValue, conditionValue, minimumBidPriceValue, startingOrCurrentBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + frontlength + "','" + chestlength + "','" + sleevelength + "','" + description + "','" + condition + "', '" + minimum + "', '" + startingorcurrentbidprice + "', '" + auctionclosedate + "', '" + auctionclosetime + "')";
-            int insertedRows = st.executeUpdate(insertTopInformation);
-        }
-        else {
+        if (minimum == null || minimum.isEmpty()) {
             minimum = "0.0";
-            String insertTopInformation = "insert into tops (auctionSellerIdValue, genderValue, sizeValue, colorValue, frontLengthValue, chestLengthValue, sleeveLengthValue, descriptionValue, conditionValue, minimumBidPriceValue, startingOrCurrentBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + frontlength + "','" + chestlength + "','" + sleevelength + "','" + description + "','" + condition + "', '" + minimum + "', '" + startingorcurrentbidprice + "', '" + auctionclosedate + "', '" + auctionclosetime + "')";
-            int insertedRows = st.executeUpdate(insertTopInformation);
         }
+
+        String insertTopInformation =
+                "INSERT INTO tops " +
+                        "(auctionSellerIdValue, genderValue, sizeValue, colorValue, " +
+                        " frontLengthValue, chestLengthValue, sleeveLengthValue, " +
+                        " descriptionValue, conditionValue, minimumBidPriceValue, " +
+                        " startingOrCurrentBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) " +
+                        "VALUES ('" + userIdValue + "','" + gender + "','" + size + "','" + color + "'," +
+                        "'" + frontlength + "','" + chestlength + "','" + sleevelength + "'," +
+                        "'" + description + "','" + condition + "','" + minimum + "','" +
+                        startingorcurrentbidprice + "','" + auctionclosedate + "','" + auctionclosetime + "')";
+
+        st.executeUpdate(insertTopInformation);
     }
 
-    ResultSet rs = st.executeQuery("select * from tops order by topIdValue desc");
-    while(rs.next()) {
+    // query tops joined with users to get seller username
+    String topsQuery =
+            "SELECT t.*, u.usernameValue AS sellerUsername " +
+                    "FROM tops t " +
+                    "JOIN users u ON t.auctionSellerIdValue = u.userIdValue " +
+                    "ORDER BY t.topIdValue DESC";
+
+    ResultSet rs = st.executeQuery(topsQuery);
+    while (rs.next()) {
+        String sellerUsername  = rs.getString("sellerUsername");
         String topIdValueDisplay = rs.getString("topIdValue");
         String genderValueDisplay = rs.getString("genderValue");
         String sizeValueDisplay = rs.getString("sizeValue");
         String colorValueDisplay = rs.getString("colorValue");
         String frontLengthValueDisplay = rs.getString("frontLengthValue");
+        String chestLengthValueDisplay = rs.getString("chestLengthValue");
         String sleeveLengthValueDisplay = rs.getString("sleeveLengthValue");
         String descriptionValueDisplay = rs.getString("descriptionValue");
         String conditionValueDisplay = rs.getString("conditionValue");
-        Float minimumBidPriceValueDisplay = rs.getFloat("minimumBidPriceValue");
-        Float startingOrCurrentBidPriceValueDisplay = rs.getFloat("startingOrCurrentBidPriceValue");
+        float minimumBidPriceValueDisplay = rs.getFloat("minimumBidPriceValue");
+        float startingOrCurrentBidPriceValueDisplay = rs.getFloat("startingOrCurrentBidPriceValue");
         String auctionCloseDateValueDisplay = rs.getString("auctionCloseDateValue");
         String auctionCloseTimeValueDisplay = rs.getString("auctionCloseTimeValue");
 
-        out.println("<div>");
-        out.println("<p>Gender: " + genderValueDisplay + "</p>");
-        out.println("<p>Size: " + sizeValueDisplay + "</p>");
-        out.println("<p>Color: " + colorValueDisplay + "</p>");
-        out.println("<p>Front Length: " + frontLengthValueDisplay + "</p>");
-        out.println("<p>Sleeve Length: " + sleeveLengthValueDisplay + "</p>");
-        out.println("<p>Description: " + descriptionValueDisplay + "</p>");
-        out.println("<p>Condition: " + conditionValueDisplay + "</p>");
-        if(minimumBidPriceValueDisplay != null || minimumBidPriceValueDisplay != 0.0f) {
-            out.println("<p>Minimum Bid Price: " + minimumBidPriceValueDisplay + "</p>");
+       out.println("<div>");
+        out.println("<p><strong>Seller:</strong> " + sellerUsername + "</p>");
+        out.println("<p><strong>Gender:</strong> " + genderValueDisplay + "</p>");
+        out.println("<p><strong>Size:</strong> " + sizeValueDisplay + "</p>");
+        out.println("<p><strong>Color:</strong> " + colorValueDisplay + "</p>");
+        out.println("<p><strong>Front Length:</strong> " + frontLengthValueDisplay + "</p>");
+        out.println("<p><strong>Chest Length:</strong> " + chestLengthValueDisplay + "</p>");
+        out.println("<p><strong>Sleeve Length:</strong> " + sleeveLengthValueDisplay + "</p>");
+        out.println("<p><strong>Description:</strong> " + descriptionValueDisplay + "</p>");
+        out.println("<p><strong>Condition:</strong> " + conditionValueDisplay + "</p>");
+        if (minimumBidPriceValueDisplay != 0.0f) {
+            out.println("<p><strong>Minimum Bid Price: </strong>" + minimumBidPriceValueDisplay + "</p>");
+        } else {
+            out.println("<p><strong>Minimum Bid Price:</strong> None</p>");
         }
-        else {
-            out.println("<p>Minimum Bid Price: " + "None" + "</p>");
-        }
-        out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>");
-        out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
-        out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
-        out.println("<input type='submit' value='Create Bid' onclick='createBid(" + counter + ")' id='TopCreateBid" + counter + "' style='margin-bottom: 100px;'>");
+
+        out.println("<p><strong>Starting or Current Bid Price: </strong>" + startingOrCurrentBidPriceValueDisplay + "</p>");
+        out.println("<p><strong>Auction Close Date: </strong>" + auctionCloseDateValueDisplay + "</p>");
+        out.println("<p><strong>Auction Close Time: </strong>" + auctionCloseTimeValueDisplay + "</p>");
+
+        out.println("<input type='button' value='Create Bid' onclick='createBid(" + counter + ")' id='TopCreateBid" + counter + "' style='margin-bottom: 100px;'>");
+
         out.println("<form method='post' action='bidPage.jsp'>");
-        out.println("<input type='hidden' name='topIdValue' value='" + topIdValueDisplay +"'>");
+        out.println("<input type='hidden' name='topIdValue' value='" + topIdValueDisplay + "'>");
         out.println("<label for='setNewBid' id='SetNewBidLabel" + counter + "' style='display: none;'>Set Bid (USD): </label>");
         out.println("<input type='number' name='setNewBid' id='SetNewBid" + counter + "' style='display: none;' required>");
         out.println("<label for='setAutomaticBid' id='SetAutomaticBidLabel" + counter + "' style='display: none;'>Set Automatic Bid: </label>");
@@ -168,7 +186,7 @@
         out.println("<input type='number' name='maxBidPrice' id='SetAutomaticBidPrice" + counter + "' style='display: none;'>");
         out.println("<label for='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPriceLabel" + counter + "' style='display: none;'>Set Bid Increment Price (USD): </label>");
         out.println("<input type='number' name='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPrice" + counter + "' style='display: none;'>");
-        out.println("<input type='submit' value='Cancel Bid' onclick='removeBid(" + counter + ")' id='cancel" + counter + "' style='display: none;'>");
+        out.println("<input type='button' value='Cancel Bid' onclick='removeBid(" + counter + ")' id='cancel" + counter + "' style='display: none;'>");
         out.println("<input type='submit' value='Place Bid' onclick='placeBid(" + counter +")' id='TopPlaceBid" + counter + "' style='display: none;'>");
         out.println("</form>");
         out.println("</div>");
@@ -181,18 +199,17 @@
         if (alertMessage.equals("success")) {
 %>
 <script>
-    alert("Your bid has been successfully placed!")
+    alert("Your bid has been successfully placed!");
 </script>
 <%
 } else if (alertMessage.equals("fail")) {
 %>
 <script>
-    alert("Your bid must be higher than the original price!")
+    alert("Your bid must be higher than the original price!");
 </script>
 <%
         }
     }
-
 
     rs.close();
     st.close();
