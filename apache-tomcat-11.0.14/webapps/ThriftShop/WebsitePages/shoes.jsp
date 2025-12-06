@@ -13,6 +13,8 @@
         return;
     }
     out.println("<h3>User: " + session.getAttribute("username") + "</h3>");
+    out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
+    out.println("<br/>This is the shoes page<br/><br/>");
 
 
 
@@ -66,7 +68,6 @@
         out.println("</div>");
     }
 
-    out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
 
     rs.close();
     st.close();

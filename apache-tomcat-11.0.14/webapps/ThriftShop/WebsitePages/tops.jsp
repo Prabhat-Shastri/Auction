@@ -12,6 +12,8 @@
         return;
     }
     out.println("<h3>User: " + session.getAttribute("username") + "</h3>");
+    out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
+    out.println("<br/>This is the Tops page<br/><br/>");
 
     int counter = 0;
 %>
@@ -191,7 +193,6 @@
         }
     }
 
-    out.println("<a href='../WebsitePages/profile.jsp'>Profile Page</a>");
 
     rs.close();
     st.close();
