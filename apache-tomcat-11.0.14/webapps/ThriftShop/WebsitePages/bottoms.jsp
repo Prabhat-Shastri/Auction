@@ -39,6 +39,7 @@
         String description = request.getParameter("Description");
         String condition   = request.getParameter("Condition");
         String minimum     = request.getParameter("Minimum");
+        String startingorcurrentbidprice = request.getParameter("StartingOrCurrentBidPrice");
         String auctionDate = request.getParameter("AuctionCloseDateBottoms");
         String auctionTime = request.getParameter("AuctionCloseTimeBottoms");
 
@@ -51,11 +52,11 @@
                         "(auctionSellerIdValue, genderValue, sizeValue, colorValue, " +
                         " waistLengthValue, inseamLengthValue, outseamLengthValue, " +
                         " hipLengthValue, riseLengthValue, descriptionValue, conditionValue, " +
-                        " minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) VALUES (" +
+                        " minimumBidPriceValue, startingOrCurrentBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) VALUES (" +
                         "'" + userIdValue + "', '" + gender + "', '" + size + "', '" + color + "', " +
                         "'" + waistLength + "', '" + inseamLength + "', '" + outseamLength + "', " +
                         "'" + hipLength + "', '" + riseLength + "', '" + description + "', '" + condition + "', " +
-                        "'" + minimum + "', '" + auctionDate + "', '" + auctionTime + "')";
+                        "'" + minimum + "', '" + startingorcurrentbidprice + "', '" + auctionDate + "', '" + auctionTime + "')";
 
         st.executeUpdate(insert);
     }

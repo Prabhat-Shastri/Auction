@@ -32,6 +32,7 @@
         String description = request.getParameter("Description");
         String condition   = request.getParameter("Condition");
         String minimum     = request.getParameter("Minimum");
+        String startingorcurrentbidprice = request.getParameter("StartingOrCurrentBidPrice");
         String auctionDate = request.getParameter("AuctionCloseDateShoes");
         String auctionTime = request.getParameter("AuctionCloseTimeShoes");
 
@@ -44,14 +45,13 @@
                 "INSERT INTO shoes " +
                         "(auctionSellerIdValue, genderValue, sizeValue, colorValue, " +
                         " descriptionValue, conditionValue, minimumBidPriceValue, " +
-                        " auctionCloseDateValue, auctionCloseTimeValue) VALUES (" +
+                        " startingOrCurrentBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) VALUES (" +
                         "'" + userIdValue + "', '" + gender + "', '" + size + "', '" + color + "', " +
                         "'" + description + "', '" + condition + "', '" + minimum + "', " +
-                        "'" + auctionDate + "', '" + auctionTime + "')";
+                        "'" + startingorcurrentbidprice + "', '" + auctionDate + "', '" + auctionTime + "')";
 
         st.executeUpdate(insert);
     }
-
     // Query shoes WITH seller username from users table
     String shoesQuery =
             "SELECT s.*, u.usernameValue AS sellerUsername " +

@@ -9,6 +9,78 @@
 <a href="mainPage.jsp">Back to Main Page</a>
 <hr />
 
+<script>
+    function createBid(counter) {
+        var SetNewBidLabel = document.getElementById('SetNewBidLabel' + counter);
+        var SetNewBid = document.getElementById('SetNewBid' + counter);
+        var SetAutomaticBidLabel = document.getElementById('SetAutomaticBidLabel' + counter);
+        var SetAutomaticBid = document.getElementById('SetAutomaticBid' + counter);
+        var cancel = document.getElementById('cancel' + counter);
+        var PlaceBid = document.getElementById('TopPlaceBid' + counter);
+
+        SetNewBidLabel.style.display = 'block';
+        SetNewBid.style.display = 'block';
+        SetAutomaticBidLabel.style.display = 'block';
+        SetAutomaticBid.style.display = 'block';
+        cancel.style.display = 'block';
+        PlaceBid.style.display = 'block';
+
+        SetAutomaticBid.addEventListener("change", function() {
+            handleAutomaticBidChange(counter);
+        });
+    }
+
+    function handleAutomaticBidChange(counter) {
+        var SetAutomaticBid = document.getElementById('SetAutomaticBid' + counter);
+        var SetAutomaticBidPriceLabel = document.getElementById('SetAutomaticBidPriceLabel' + counter);
+        var SetAutomaticBidPrice = document.getElementById('SetAutomaticBidPrice' + counter);
+        var SetAutomaticBidIncrementPriceLabel = document.getElementById('SetAutomaticBidIncrementPriceLabel' + counter);
+        var SetAutomaticBidIncrementPrice = document.getElementById('SetAutomaticBidIncrementPrice' + counter);
+
+        const value = SetAutomaticBid.value;
+
+        if (value === 'true') {
+            SetAutomaticBidPriceLabel.style.display = 'block';
+            SetAutomaticBidPrice.style.display = 'block';
+            SetAutomaticBidIncrementPriceLabel.style.display = 'block';
+            SetAutomaticBidIncrementPrice.style.display = 'block';
+        } else {
+            SetAutomaticBidPriceLabel.style.display = 'none';
+            SetAutomaticBidPrice.style.display = 'none';
+            SetAutomaticBidIncrementPriceLabel.style.display = 'none';
+            SetAutomaticBidIncrementPrice.style.display = 'none';
+        }
+    }
+
+    function removeBid(counter) {
+        var SetNewBidLabel = document.getElementById('SetNewBidLabel' + counter);
+        var SetNewBid = document.getElementById('SetNewBid' + counter);
+        var SetAutomaticBidLabel = document.getElementById('SetAutomaticBidLabel' + counter);
+        var SetAutomaticBid = document.getElementById('SetAutomaticBid' + counter);
+        var SetAutomaticBidPriceLabel = document.getElementById('SetAutomaticBidPriceLabel' + counter);
+        var SetAutomaticBidPrice = document.getElementById('SetAutomaticBidPrice' + counter);
+        var SetAutomaticBidIncrementPriceLabel = document.getElementById('SetAutomaticBidIncrementPriceLabel' + counter);
+        var SetAutomaticBidIncrementPrice = document.getElementById('SetAutomaticBidIncrementPrice' + counter);
+        var cancel = document.getElementById('cancel' + counter);
+        var PlaceBid = document.getElementById('TopPlaceBid' + counter);
+
+        SetNewBidLabel.style.display = 'none';
+        SetNewBid.style.display = 'none';
+        SetAutomaticBidLabel.style.display = 'none';
+        SetAutomaticBid.style.display = 'none';
+        SetAutomaticBidPriceLabel.style.display = 'none';
+        SetAutomaticBidPrice.style.display = 'none';
+        SetAutomaticBidIncrementPriceLabel.style.display = 'none';
+        SetAutomaticBidIncrementPrice.style.display = 'none';
+        cancel.style.display = 'none';
+        PlaceBid.style.display = 'none';
+    }
+
+    function placeBid(counter) {
+        // handled by bidPage.jsp on submit
+    }
+</script>
+
 <%
     String itemType = request.getParameter("itemType");
     if (itemType == null || itemType.trim().isEmpty()) {
@@ -22,6 +94,8 @@
         String dbPass  = "12345";
 
         Class.forName("com.mysql.cj.jdbc.Driver");
+
+        int counter = 0;
 
         // ===================================
         // CASE 1: ANY ITEM TYPE
@@ -143,11 +217,23 @@
                 while (rs.next()) {
                     found = true;
 
-                    // ==== MINIMAL CHANGE 1: MAKE SELLER CLICKABLE ====
+                    int currentCounter = counter++;
+
                     String sellerUsername = rs.getString("sellerUsername");
                     String sellerLink =
                             "searchResults.jsp?itemType=any&searchSeller=" +
                                     java.net.URLEncoder.encode(sellerUsername, "UTF-8");
+
+                    String currentItemType = rs.getString("itemType");
+                    String itemId = rs.getString("itemId");
+                    String idParamName = null;
+                    if ("tops".equals(currentItemType)) {
+                        idParamName = "itemIdValue";
+                    } else if ("bottoms".equals(currentItemType)) {
+                        idParamName = "bottomIdValue";
+                    } else if ("shoes".equals(currentItemType)) {
+                        idParamName = "shoeIdValue";
+                    }
 %>
 
 <div style="border:1px solid #ccc; margin:10px; padding:10px;">
@@ -163,6 +249,43 @@
     <p><strong>Description:</strong> <%= rs.getString("descriptionValue") %></p>
     <p><strong>Condition:</strong> <%= rs.getString("conditionValue") %></p>
     <p><strong>Price:</strong> $<%= rs.getString("minimumBidPriceValue") %></p>
+
+    <form method="get" action="bidHistory.jsp" style="margin-bottom:10px;">
+        <input type="hidden" name="itemType" value="<%= currentItemType %>" />
+        <input type="hidden" name="itemIdValue" value="<%= itemId %>" />
+        <input type="submit" value="View Bid History" />
+    </form>
+
+    <input type='button'
+           value='Create Bid'
+           onclick='createBid(<%= currentCounter %>)'
+           id='TopCreateBid<%= currentCounter %>'
+           style='margin-bottom: 20px;'>
+
+    <form method='post' action='bidPage.jsp'>
+        <% if (idParamName != null) { %>
+        <input type='hidden' name='<%= idParamName %>' value='<%= itemId %>'>
+        <% } %>
+
+        <label for='setNewBid' id='SetNewBidLabel<%= currentCounter %>' style='display: none;'>Set Bid (USD): </label>
+        <input type='number' name='setNewBid' id='SetNewBid<%= currentCounter %>' style='display: none;' required>
+
+        <label for='setAutomaticBid' id='SetAutomaticBidLabel<%= currentCounter %>' style='display: none;'>Set Automatic Bid: </label>
+        <select name='setAutomaticBid' id='SetAutomaticBid<%= currentCounter %>' style='display: none;' required>
+            <option value='selectAnItem' disabled selected>Select Item...</option>
+            <option value='true' id='true'>Yes</option>
+            <option value='false' id='false'>No</option>
+        </select>
+
+        <label for='maxBidPrice' id='SetAutomaticBidPriceLabel<%= currentCounter %>' style='display: none;'>Set Max Bid Price (USD): </label>
+        <input type='number' name='maxBidPrice' id='SetAutomaticBidPrice<%= currentCounter %>' style='display: none;'>
+
+        <label for='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPriceLabel<%= currentCounter %>' style='display: none;'>Set Bid Increment Price (USD): </label>
+        <input type='number' name='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPrice<%= currentCounter %>' style='display: none;'>
+
+        <input type='button' value='Cancel Bid' onclick='removeBid(<%= currentCounter %>)' id='cancel<%= currentCounter %>' style='display: none;'>
+        <input type='submit' value='Place Bid' onclick='placeBid(<%= currentCounter %>)' id='TopPlaceBid<%= currentCounter %>' style='display: none;'>
+    </form>
 </div>
 
 <%
@@ -340,10 +463,20 @@
             idCol = "shoeIdValue";
         }
 
+        String idParamName = null;
+        if ("tops".equals(itemType)) {
+            idParamName = "topIdValue";
+        } else if ("bottoms".equals(itemType)) {
+            idParamName = "bottomIdValue";
+        } else if ("shoes".equals(itemType)) {
+            idParamName = "shoeIdValue";
+        }
+
         while (rs.next()) {
             found = true;
 
-            // ==== MINIMAL CHANGE 2: MAKE SELLER CLICKABLE ====
+            int currentCounter = counter++;
+
             String sellerUsername = rs.getString("sellerUsername");
             String sellerLink =
                     "searchResults.jsp?itemType=any&searchSeller=" +
@@ -365,6 +498,45 @@
     <p><strong>Description:</strong> <%= rs.getString("descriptionValue") %></p>
     <p><strong>Condition:</strong> <%= rs.getString("conditionValue") %></p>
     <p><strong>Price:</strong> $<%= rs.getString("minimumBidPriceValue") %></p>
+
+    <% if (idCol != null && idParamName != null) { %>
+    <form method="get" action="bidHistory.jsp" style="margin-bottom:10px;">
+        <input type="hidden" name="itemType" value="<%= itemType %>" />
+        <input type="hidden" name="itemIdValue" value="<%= rs.getString(idCol) %>" />
+        <input type="submit" value="View Bid History" />
+    </form>
+    <% } %>
+
+    <input type='button'
+           value='Create Bid'
+           onclick='createBid(<%= currentCounter %>)'
+           id='TopCreateBid<%= currentCounter %>'
+           style='margin-bottom: 20px;'>
+
+    <form method='post' action='bidPage.jsp'>
+        <% if (idCol != null && idParamName != null) { %>
+        <input type='hidden' name='<%= idParamName %>' value='<%= rs.getString(idCol) %>'>
+        <% } %>
+
+        <label for='setNewBid' id='SetNewBidLabel<%= currentCounter %>' style='display: none;'>Set Bid (USD): </label>
+        <input type='number' name='setNewBid' id='SetNewBid<%= currentCounter %>' style='display: none;' required>
+
+        <label for='setAutomaticBid' id='SetAutomaticBidLabel<%= currentCounter %>' style='display: none;'>Set Automatic Bid: </label>
+        <select name='setAutomaticBid' id='SetAutomaticBid<%= currentCounter %>' style='display: none;' required>
+            <option value='selectAnItem' disabled selected>Select Item...</option>
+            <option value='true' id='true'>Yes</option>
+            <option value='false' id='false'>No</option>
+        </select>
+
+        <label for='maxBidPrice' id='SetAutomaticBidPriceLabel<%= currentCounter %>' style='display: none;'>Set Max Bid Price (USD): </label>
+        <input type='number' name='maxBidPrice' id='SetAutomaticBidPrice<%= currentCounter %>' style='display: none;'>
+
+        <label for='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPriceLabel<%= currentCounter %>' style='display: none;'>Set Bid Increment Price (USD): </label>
+        <input type='number' name='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPrice<%= currentCounter %>' style='display: none;'>
+
+        <input type='button' value='Cancel Bid' onclick='removeBid(<%= currentCounter %>)' id='cancel<%= currentCounter %>' style='display: none;'>
+        <input type='submit' value='Place Bid' onclick='placeBid(<%= currentCounter %>)' id='TopPlaceBid<%= currentCounter %>' style='display: none;'>
+    </form>
 </div>
 
 <%
