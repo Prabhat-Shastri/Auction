@@ -3,7 +3,7 @@
    + but I am sure it will work after setting up bidding inside the shoes and bottoms.
 2. I added one new table to schema.
 
-![img.png](img.png)
+
 
 'CREATE TABLE `tops` (
 `topIdValue` int NOT NULL AUTO_INCREMENT,
