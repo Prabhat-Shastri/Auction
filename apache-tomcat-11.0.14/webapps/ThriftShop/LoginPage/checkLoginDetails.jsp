@@ -4,7 +4,7 @@ String username = request.getParameter("username");
 String password = request.getParameter("password");
 Class.forName("com.mysql.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root",
-"Xcrafty!3my");
+"12345");
 Statement st = con.createStatement();
 ResultSet rs;
 rs = st.executeQuery("select userIdValue from users where usernameValue ='" + username + "' and passwordValue='" + password + "'");

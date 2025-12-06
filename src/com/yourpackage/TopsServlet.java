@@ -33,7 +33,7 @@ public class TopsServlet extends HttpServlet {
 
         String jdbcUrl = "jdbc:mysql://localhost:3306/thriftShop";
         String dbUser = "root";
-        String dbPass = "Xcrafty!3my";
+        String dbPass = "12345";
 
         // target images folder inside webapp
         String imagesDir = getServletContext().getRealPath("/Images");

@@ -43,3 +43,1807 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
 		at java.base/java.lang.Thread.run(Thread.java:1570)
+05-Dec-2025 21:19:29.275 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/tops.jsp] at line [7]
+
+4: <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+5: <%
+6: Class.forName("com.mysql.jdbc.Driver");
+7: Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+8: Statement st = con.createStatement();
+9: 
+10: int counter = 0;
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.tops_jsp._jspService(tops_jsp.java:135)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 21:19:30.910 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/tops.jsp] at line [7]
+
+4: <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+5: <%
+6: Class.forName("com.mysql.jdbc.Driver");
+7: Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+8: Statement st = con.createStatement();
+9: 
+10: int counter = 0;
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.tops_jsp._jspService(tops_jsp.java:135)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 21:19:32.802 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/bottoms.jsp] at line [8]
+
+5: <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+6: <%
+7: Class.forName("com.mysql.jdbc.Driver");
+8: Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+9: Statement st = con.createStatement();
+10: 
+11: String gender = request.getParameter("bottomGender");
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.bottoms_jsp._jspService(bottoms_jsp.java:136)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 21:19:34.500 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/notifications.jsp] at line [6]
+
+3: <%@ page import="java.sql.*" %>
+4: <%
+5: Class.forName("com.mysql.jdbc.Driver");
+6: Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+7: Statement st = con.createStatement();
+8: %>
+9: <script>
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.notifications_jsp._jspService(notifications_jsp.java:132)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 21:19:52.606 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/bottoms.jsp] at line [8]
+
+5: <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+6: <%
+7: Class.forName("com.mysql.jdbc.Driver");
+8: Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+9: Statement st = con.createStatement();
+10: 
+11: String gender = request.getParameter("bottomGender");
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.bottoms_jsp._jspService(bottoms_jsp.java:136)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 21:20:21.545 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/notifications.jsp] at line [6]
+
+3: <%@ page import="java.sql.*" %>
+4: <%
+5: Class.forName("com.mysql.jdbc.Driver");
+6: Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+7: Statement st = con.createStatement();
+8: %>
+9: <script>
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.notifications_jsp._jspService(notifications_jsp.java:132)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 21:22:54.041 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/tops.jsp] at line [107]
+
+104: 
+105:     if(minimum != null && !minimum.isEmpty() && !minimum.equals("0.0")) {
+106:         String insertTopInformation = "insert into tops (auctionSellerIdValue, genderValue, sizeValue, colorValue, frontLengthValue, chestLengthValue, sleeveLengthValue, descriptionValue, conditionValue, minimumBidPriceValue, startingOrCurrentBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + frontlength + "','" + chestlength + "','" + sleevelength + "','" + description + "','" + condition + "', '" + minimum + "', '" + startingorcurrentbidprice + "', '" + auctionclosedate + "', '" + auctionclosetime + "')"; 
+107:         int insertedRows = st.executeUpdate(insertTopInformation);
+108:     }
+109:     else {
+110:         minimum = "0.0";
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Incorrect integer value: 'null' for column 'auctionSellerIdValue' at row 1
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1499)
+		at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2321)
+		at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1369)
+		at org.apache.jsp.WebsitePages.tops_jsp._jspService(tops_jsp.java:236)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:28:53.573 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [132] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+129:                         else {
+130:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+131:                         }
+132:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+133:                         ");
+134:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+135:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [132] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+129:                         else {
+130:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+131:                         }
+132:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+133:                         ");
+134:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+135:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:28:55.159 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.tops_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.tops_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:93)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:47)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:147)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:163)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:382)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:31:04.476 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:31:08.064 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+131:                             else {
+132:                             out.println("<p>Minimum Bid Price: None</p>");
+133:                             }
+134:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+135:                             </p>");
+136:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+137:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+131:                             else {
+132:                             out.println("<p>Minimum Bid Price: None</p>");
+133:                             }
+134:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+135:                             </p>");
+136:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+137:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:31:09.650 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [50] in the jsp file: [/WebsitePages/shoes.jsp]
+Syntax error on token "catch", Identifier expected
+47: 
+48:                     out.println("<a href='../WebsitePages/profile.jsp'>Profile Page</a>");
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+_jspx_out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [184] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [185] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [187] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [193] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [194] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [50] in the jsp file: [/WebsitePages/shoes.jsp]
+Syntax error on token "catch", Identifier expected
+47: 
+48:                     out.println("<a href='../WebsitePages/profile.jsp'>Profile Page</a>");
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+_jspx_out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [184] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [185] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [187] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [193] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [194] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:32:53.033 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:32:56.123 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.tops_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.tops_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:93)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:47)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:147)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:163)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:382)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:34:12.155 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:34:17.294 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [50] in the jsp file: [/WebsitePages/shoes.jsp]
+Syntax error on token "catch", Identifier expected
+47: 
+48:                     out.println("<a href='../WebsitePages/profile.jsp'>Profile Page</a>");
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+_jspx_out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [184] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [185] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [187] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [193] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [194] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [22] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+19:                     insertShoeInformation="insert into shoes (auctionSellerIdValue, genderValue, sizeValue, colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue, auctionCloseTimeValue) values ('"
+20:                     + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color + "','" + description + "','" +
+21:                     condition + "', '" + minimum + "', '" + auctionclosedate + "', '" + auctionclosetime + "')" ; int
+22:                     insertedRows=st.executeUpdate(insertShoeInformation); } } ResultSet rs=st.executeQuery("select *
+23:                     from shoes order by shoeIdValue desc"); while(rs.next()) { String
+24:                     genderValueDisplay=rs.getString("genderValue"); String sizeValueDisplay=rs.getString("sizeValue");
+25:                     String colorValueDisplay=rs.getString("colorValue"); String
+
+
+An error occurred at line: [50] in the jsp file: [/WebsitePages/shoes.jsp]
+Syntax error on token "catch", Identifier expected
+47: 
+48:                     out.println("<a href='../WebsitePages/profile.jsp'>Profile Page</a>");
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [52] in the jsp file: [/WebsitePages/shoes.jsp]
+_jspx_out cannot be resolved to a variable
+49: 
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved to a variable
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [53] in the jsp file: [/WebsitePages/shoes.jsp]
+out cannot be resolved
+50:                     rs.close();
+51:                     st.close();
+52:                     con.close();
+53:                     %>
+
+
+An error occurred at line: [184] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [185] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [187] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [190] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [193] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [194] in the generated java file: [C:\Users\doruk\My Drive (de295@scarletmail.rutgers.edu)\2025 Fall Courses\Data management\Project\Auction_final ish\apache-tomcat-11.0.14\work\Catalina\localhost\ThriftShop\org\apache\jsp\WebsitePages\shoes_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:34:18.631 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+131:                             else {
+132:                             out.println("<p>Minimum Bid Price: None</p>");
+133:                             }
+134:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+135:                             </p>");
+136:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+137:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+131:                             else {
+132:                             out.println("<p>Minimum Bid Price: None</p>");
+133:                             }
+134:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+135:                             </p>");
+136:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+137:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:35:36.359 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/shoes.jsp] at line [8]
+
+5: <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+6: <%
+7:     Class.forName("com.mysql.jdbc.Driver");
+8:     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+9:     Statement st = con.createStatement();
+10: 
+11: 
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.shoes_jsp._jspService(shoes_jsp.java:136)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:38:28.809 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:38:38.090 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [136] in the jsp file: [/WebsitePages/tops.jsp]
+String literal is not properly closed by a double-quote
+133:                         else {
+134:                         out.println("<p>Minimum Bid Price: " + "None" + "</p>");
+135:                         }
+136:                         out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>
+137:                         ");
+138:                         out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+139:                         out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:39:16.206 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [An exception occurred processing [/WebsitePages/bottoms.jsp] at line [8]
+
+5: <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
+6: <%
+7:     Class.forName("com.mysql.jdbc.Driver");
+8:     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+9:     Statement st = con.createStatement();
+10: 
+11:     String gender = request.getParameter("bottomGender");
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at org.apache.jsp.WebsitePages.bottoms_jsp._jspService(bottoms_jsp.java:136)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:428)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:39:35.921 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+131:                             else {
+132:                             out.println("<p>Minimum Bid Price: None</p>");
+133:                             }
+134:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+135:                             </p>");
+136:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+137:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+131:                             else {
+132:                             out.println("<p>Minimum Bid Price: None</p>");
+133:                             }
+134:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+135:                             </p>");
+136:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+137:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:40:21.792 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: /WebsitePages/notifications.jsp (line: [80], column: [2]) Unterminated [&lt;%] tag] with root cause
+	org.apache.jasper.JasperException: /WebsitePages/notifications.jsp (line: [80], column: [2]) Unterminated [&lt;%] tag
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:29)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:265)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:88)
+		at org.apache.jasper.compiler.Parser.parseScriptlet(Parser.java:720)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1296)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:125)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:240)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:103)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:188)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:40:31.101 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: /WebsitePages/notifications.jsp (line: [80], column: [2]) Unterminated [&lt;%] tag] with root cause
+	org.apache.jasper.JasperException: /WebsitePages/notifications.jsp (line: [80], column: [2]) Unterminated [&lt;%] tag
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:29)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:265)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:88)
+		at org.apache.jasper.compiler.Parser.parseScriptlet(Parser.java:720)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1296)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:125)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:240)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:103)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:188)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:40:31.817 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.notifications_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.notifications_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:93)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:47)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:147)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:163)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:382)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:40:33.548 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.notifications_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.WebsitePages.notifications_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:93)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:47)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:147)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:163)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:382)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:40:36.817 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: /WebsitePages/notifications.jsp (line: [80], column: [2]) Unterminated [&lt;%] tag] with root cause
+	org.apache.jasper.JasperException: /WebsitePages/notifications.jsp (line: [80], column: [2]) Unterminated [&lt;%] tag
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:29)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:265)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:88)
+		at org.apache.jasper.compiler.Parser.parseScriptlet(Parser.java:720)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1296)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:125)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:240)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:103)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:188)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:361)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:44:06.319 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [137] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+134:                             else {
+135:                             out.println("<p>Minimum Bid Price: None</p>");
+136:                             }
+137:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+138:                             </p>");
+139:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+140:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [137] in the jsp file: [/WebsitePages/notifications.jsp]
+String literal is not properly closed by a double-quote
+134:                             else {
+135:                             out.println("<p>Minimum Bid Price: None</p>");
+136:                             }
+137:                             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "
+138:                             </p>");
+139:                             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
+140:                             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:44:09.622 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/WebsitePages/bottoms.jsp]
+String literal is not properly closed by a double-quote
+30:                     }
+31:                     else {
+32:                     minimum = "0.0";
+33:                     String insertBottomInformation = "insert into bottoms (auctionSellerIdValue, genderValue, sizeValue,
+34:                     colorValue, waistLengthValue, inseamLengthValue, outseamLengthValue, hipLengthValue,
+35:                     riseLengthValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue,
+36:                     auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color +
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/WebsitePages/bottoms.jsp]
+String literal is not properly closed by a double-quote
+30:                     }
+31:                     else {
+32:                     minimum = "0.0";
+33:                     String insertBottomInformation = "insert into bottoms (auctionSellerIdValue, genderValue, sizeValue,
+34:                     colorValue, waistLengthValue, inseamLengthValue, outseamLengthValue, hipLengthValue,
+35:                     riseLengthValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue,
+36:                     auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color +
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Dec-2025 22:44:11.084 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/ThriftShop] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [25] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+22:                     String auctionclosetime = request.getParameter("AuctionCloseTimeShoes");
+23: 
+24:                     if(minimum != null && !minimum.isEmpty() && !minimum.equals("0.0")) {
+25:                     String insertShoeInformation = "insert into shoes (auctionSellerIdValue, genderValue, sizeValue,
+26:                     colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue,
+27:                     auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color +
+28:                     "','" + description + "','" + condition + "', '" + minimum + "', '" + auctionclosedate + "', '" +
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [25] in the jsp file: [/WebsitePages/shoes.jsp]
+String literal is not properly closed by a double-quote
+22:                     String auctionclosetime = request.getParameter("AuctionCloseTimeShoes");
+23: 
+24:                     if(minimum != null && !minimum.isEmpty() && !minimum.equals("0.0")) {
+25:                     String insertShoeInformation = "insert into shoes (auctionSellerIdValue, genderValue, sizeValue,
+26:                     colorValue, descriptionValue, conditionValue, minimumBidPriceValue, auctionCloseDateValue,
+27:                     auctionCloseTimeValue) values ('" + userIdValue + "','" + gender + "' ,'" + size + "' ,'" + color +
+28:                     "','" + description + "','" + condition + "', '" + minimum + "', '" + auctionclosedate + "', '" +
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:523)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:339)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:325)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:330)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:281)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
