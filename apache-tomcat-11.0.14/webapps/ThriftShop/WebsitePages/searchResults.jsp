@@ -9,6 +9,34 @@
 <a href="mainPage.jsp">Back to Main Page</a>
 <hr />
 
+<%
+    String itemType  = request.getParameter("itemType");   // tops, bottoms, shoes, any
+    String sortBy    = request.getParameter("sortBy");     // price, type
+    String sortOrder = request.getParameter("sortOrder");  // asc, desc
+
+    if (sortOrder == null || sortOrder.trim().isEmpty()) {
+        sortOrder = "asc";
+    }
+%>
+
+<form method="get" action="searchResults.jsp" style="margin-bottom: 15px;">
+    <input type="hidden" name="itemType" value="<%= itemType == null ? "" : itemType %>">
+
+    <label>Sort by:</label>
+    <select name="sortBy">
+        <option value="" <%= (sortBy == null || sortBy.isEmpty()) ? "selected" : "" %>>Default</option>
+        <option value="price" <%= "price".equalsIgnoreCase(sortBy) ? "selected" : "" %>>Price</option>
+        <option value="type"  <%= "type".equalsIgnoreCase(sortBy)  ? "selected" : "" %>>Type (only Any)</option>
+    </select>
+
+    <select name="sortOrder">
+        <option value="asc"  <%= !"desc".equalsIgnoreCase(sortOrder) ? "selected" : "" %>>Ascending</option>
+        <option value="desc" <%=  "desc".equalsIgnoreCase(sortOrder) ? "selected" : "" %>>Descending</option>
+    </select>
+
+    <input type="submit" value="Apply" />
+</form>
+
 <script>
     function createBid(counter) {
         var SetNewBidLabel = document.getElementById('SetNewBidLabel' + counter);
@@ -77,17 +105,16 @@
     }
 
     function placeBid(counter) {
-        // handled by bidPage.jsp on submit
+        // handled by bidPage.jsp
     }
 </script>
 
 <%
-    String itemType = request.getParameter("itemType");
     if (itemType == null || itemType.trim().isEmpty()) {
         out.println("<p>Please select an item type to search.</p>");
     } else {
 
-        itemType = itemType.trim();   // "tops", "bottoms", "shoes", or "any"
+        itemType = itemType.trim();
 
         String jdbcUrl = "jdbc:mysql://localhost:3306/thriftShop";
         String dbUser  = "root";
@@ -97,10 +124,8 @@
 
         int counter = 0;
 
-        // ===================================
-        // CASE 1: ANY ITEM TYPE
-        // ===================================
         if ("any".equals(itemType)) {
+
             try (Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
                  Statement st = con.createStatement()) {
 
@@ -206,10 +231,26 @@
                                 "FROM shoes s JOIN users u ON s.auctionSellerIdValue = u.userIdValue" +
                                 whereS.toString();
 
+                String orderClause = " ORDER BY itemType, itemId";
+
+                if ("price".equalsIgnoreCase(sortBy)) {
+                    if ("desc".equalsIgnoreCase(sortOrder)) {
+                        orderClause = " ORDER BY minimumBidPriceValue DESC, itemType, itemId";
+                    } else {
+                        orderClause = " ORDER BY minimumBidPriceValue ASC, itemType, itemId";
+                    }
+                } else if ("type".equalsIgnoreCase(sortBy)) {
+                    if ("desc".equalsIgnoreCase(sortOrder)) {
+                        orderClause = " ORDER BY itemType DESC, itemId";
+                    } else {
+                        orderClause = " ORDER BY itemType ASC, itemId";
+                    }
+                }
+
                 String finalSql =
                         sqlTops + " UNION ALL " +
                                 sqlBottoms + " UNION ALL " +
-                                sqlShoes + " ORDER BY itemType, itemId";
+                                sqlShoes + orderClause;
 
                 ResultSet rs = st.executeQuery(finalSql);
                 boolean found = false;
@@ -228,7 +269,7 @@
                     String itemId = rs.getString("itemId");
                     String idParamName = null;
                     if ("tops".equals(currentItemType)) {
-                        idParamName = "itemIdValue";
+                        idParamName = "topIdValue";
                     } else if ("bottoms".equals(currentItemType)) {
                         idParamName = "bottomIdValue";
                     } else if ("shoes".equals(currentItemType)) {
@@ -300,10 +341,8 @@
         out.println("Error: " + e.getMessage());
     }
 
-    // ===================================
-    // CASE 2: SINGLE ITEM TYPE
-    // ===================================
 } else {
+
     try (Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
          Statement st = con.createStatement()) {
 
@@ -451,6 +490,22 @@
             sql.append(" AND u.usernameValue = '").append(safeSeller).append("'");
         }
 
+        if ("price".equalsIgnoreCase(sortBy)) {
+            if ("desc".equalsIgnoreCase(sortOrder)) {
+                sql.append(" ORDER BY ").append(tableAlias).append(".minimumBidPriceValue DESC");
+            } else {
+                sql.append(" ORDER BY ").append(tableAlias).append(".minimumBidPriceValue ASC");
+            }
+        } else {
+            if ("tops".equals(itemType)) {
+                sql.append(" ORDER BY ").append(tableAlias).append(".topIdValue");
+            } else if ("bottoms".equals(itemType)) {
+                sql.append(" ORDER BY ").append(tableAlias).append(".bottomIdValue");
+            } else if ("shoes".equals(itemType)) {
+                sql.append(" ORDER BY ").append(tableAlias).append(".shoeIdValue");
+            }
+        }
+
         ResultSet rs = st.executeQuery(sql.toString());
         boolean found = false;
 
@@ -463,14 +518,7 @@
             idCol = "shoeIdValue";
         }
 
-        String idParamName = null;
-        if ("tops".equals(itemType)) {
-            idParamName = "topIdValue";
-        } else if ("bottoms".equals(itemType)) {
-            idParamName = "bottomIdValue";
-        } else if ("shoes".equals(itemType)) {
-            idParamName = "shoeIdValue";
-        }
+        String idParamName = idCol;
 
         while (rs.next()) {
             found = true;
