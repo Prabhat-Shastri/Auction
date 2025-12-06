@@ -1,5 +1,6 @@
 1. bid history and bidding do not work for bottoms and shoes. Vamsi was working on it. they should work after he finishes.
-   + few adjustments might need in searchResults, bidHistory, 
+   + few adjustments might need in searchResults, bidHistory,
+   + but I am sure it will work after setting up bidding inside the shoes and bottoms.
 2. I added one new table to schema.
 
 ![img.png](img.png)
