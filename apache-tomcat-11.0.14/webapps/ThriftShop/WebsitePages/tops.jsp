@@ -22,6 +22,22 @@
     out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
     out.println("<br/>This is the Tops page<br/><br/>");
 
+    // Get Show Similars parameters
+    String similarId = request.getParameter("similarId");
+    String similarSize = request.getParameter("similarSize");
+    String similarGender = request.getParameter("similarGender");
+    String similarMinPrice = request.getParameter("similarMinPrice");
+    String similarMaxPrice = request.getParameter("similarMaxPrice");
+
+    boolean showingSimilar = (similarSize != null && !similarSize.isEmpty() &&
+            similarGender != null && !similarGender.isEmpty());
+
+    if (showingSimilar) {
+        out.println("<p><strong>Showing Similar Tops:</strong> Gender \"" + similarGender + "\" | Size \"" + similarSize + "\" | Price: $" + similarMinPrice + " - $" + similarMaxPrice);
+        out.println("&nbsp;&nbsp;<a href='tops.jsp'>Clear Filter</a></p>");
+        out.println("<hr/>");
+    }
+
     int counter = 0;
 %>
 
@@ -162,15 +178,44 @@
         st.executeUpdate(insertTopInformation);
     }
 
-    // query tops joined with users to get seller username
-    String topsQuery =
+    // Build query - with or without similarity filter
+    StringBuilder topsQuery = new StringBuilder(
             "SELECT t.*, u.usernameValue AS sellerUsername " +
                     "FROM tops t " +
                     "JOIN users u ON t.auctionSellerIdValue = u.userIdValue " +
-                    "ORDER BY t.topIdValue DESC";
+                    "WHERE 1=1");
 
-    ResultSet rs = st.executeQuery(topsQuery);
+    if (showingSimilar) {
+        // Filter by gender
+        if (similarGender != null && !similarGender.isEmpty()) {
+            String safeGender = similarGender.replace("'", "''");
+            topsQuery.append(" AND t.genderValue = '").append(safeGender).append("'");
+        }
+        // Filter by size
+        if (similarSize != null && !similarSize.isEmpty()) {
+            String safeSize = similarSize.replace("'", "''");
+            topsQuery.append(" AND t.sizeValue = '").append(safeSize).append("'");
+        }
+        // Filter by price range
+        if (similarMinPrice != null && !similarMinPrice.isEmpty()) {
+            topsQuery.append(" AND t.minimumBidPriceValue >= ").append(similarMinPrice);
+        }
+        if (similarMaxPrice != null && !similarMaxPrice.isEmpty()) {
+            topsQuery.append(" AND t.minimumBidPriceValue <= ").append(similarMaxPrice);
+        }
+        // Exclude the original item
+        if (similarId != null && !similarId.isEmpty()) {
+            topsQuery.append(" AND t.topIdValue != ").append(similarId);
+        }
+    }
+
+    topsQuery.append(" ORDER BY t.topIdValue DESC");
+
+    ResultSet rs = st.executeQuery(topsQuery.toString());
+    boolean found = false;
+
     while (rs.next()) {
+        found = true;
         String sellerUsername  = rs.getString("sellerUsername");
         String topIdValueDisplay = rs.getString("topIdValue");
         String genderValueDisplay = rs.getString("genderValue");
@@ -185,6 +230,10 @@
         float startingOrCurrentBidPriceValueDisplay = rs.getFloat("startingOrCurrentBidPriceValue");
         String auctionCloseDateValueDisplay = rs.getString("auctionCloseDateValue");
         String auctionCloseTimeValueDisplay = rs.getString("auctionCloseTimeValue");
+
+        // Calculate price range for Show Similars (±10%)
+        double simMinPrice = Math.round(minimumBidPriceValueDisplay * 0.9 * 100.0) / 100.0;
+        double simMaxPrice = Math.round(minimumBidPriceValueDisplay * 1.1 * 100.0) / 100.0;
 
         out.println("<div>");
         out.println("<p><strong>Seller:</strong> " + sellerUsername + "</p>");
@@ -207,7 +256,17 @@
         out.println("<p><strong>Auction Close Date: </strong>" + auctionCloseDateValueDisplay + "</p>");
         out.println("<p><strong>Auction Close Time: </strong>" + auctionCloseTimeValueDisplay + "</p>");
 
-        out.println("<input type='button' value='Create Bid' onclick='createBid(" + counter + ")' id='TopCreateBid" + counter + "' style='margin-bottom: 100px;'>");
+        // Show Similars form
+        out.println("<form method='get' action='tops.jsp' style='display:inline;'>");
+        out.println("<input type='hidden' name='similarId' value='" + topIdValueDisplay + "'>");
+        out.println("<input type='hidden' name='similarSize' value='" + (sizeValueDisplay != null ? sizeValueDisplay : "") + "'>");
+        out.println("<input type='hidden' name='similarGender' value='" + (genderValueDisplay != null ? genderValueDisplay : "") + "'>");
+        out.println("<input type='hidden' name='similarMinPrice' value='" + simMinPrice + "'>");
+        out.println("<input type='hidden' name='similarMaxPrice' value='" + simMaxPrice + "'>");
+        out.println("<input type='submit' value='Show Similars'>");
+        out.println("</form>");
+
+        out.println("<input type='button' value='Create Bid' onclick='createBid(" + counter + ")' id='TopCreateBid" + counter + "' style='margin-left: 10px; margin-bottom: 100px;'>");
 
         out.println("<form method='post' action='bidPage.jsp'>");
         out.println("<input type='hidden' name='topIdValue' value='" + topIdValueDisplay + "'>");
@@ -229,6 +288,10 @@
         out.println("</div>");
 
         counter++;
+    }
+
+    if (!found) {
+        out.println("<p>No tops found matching your criteria.</p>");
     }
 
     // show alerts from bidPage.jsp

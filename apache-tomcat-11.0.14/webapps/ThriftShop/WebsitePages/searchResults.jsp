@@ -14,13 +14,39 @@
     String sortBy    = request.getParameter("sortBy");     // price, type
     String sortOrder = request.getParameter("sortOrder");  // asc, desc
 
+    // Parameters for "Show Similars" feature
+    String similarTo = request.getParameter("similarTo");
+    String similarId = request.getParameter("similarId");
+    String similarSize = request.getParameter("similarSize");
+    String similarGender = request.getParameter("similarGender");
+    String similarMinPrice = request.getParameter("similarMinPrice");
+    String similarMaxPrice = request.getParameter("similarMaxPrice");
+
     if (sortOrder == null || sortOrder.trim().isEmpty()) {
         sortOrder = "asc";
     }
+
+    boolean showingSimilar = (similarTo != null && !similarTo.isEmpty() &&
+            similarSize != null && !similarSize.isEmpty());
 %>
+
+<% if (showingSimilar) { %>
+<p><strong>Showing Similar Items:</strong> Gender "<%= similarGender %>" | Size "<%= similarSize %>" | Price: $<%= similarMinPrice %> - $<%= similarMaxPrice %>
+    &nbsp;&nbsp;<a href="searchResults.jsp?itemType=<%= itemType != null ? itemType : "any" %>">Clear Filter</a>
+</p>
+<hr />
+<% } %>
 
 <form method="get" action="searchResults.jsp" style="margin-bottom: 15px;">
     <input type="hidden" name="itemType" value="<%= itemType == null ? "" : itemType %>">
+    <% if (showingSimilar) { %>
+    <input type="hidden" name="similarTo" value="<%= similarTo %>">
+    <input type="hidden" name="similarId" value="<%= similarId %>">
+    <input type="hidden" name="similarSize" value="<%= similarSize %>">
+    <input type="hidden" name="similarGender" value="<%= similarGender %>">
+    <input type="hidden" name="similarMinPrice" value="<%= similarMinPrice %>">
+    <input type="hidden" name="similarMaxPrice" value="<%= similarMaxPrice %>">
+    <% } %>
 
     <label>Sort by:</label>
     <select name="sortBy">
@@ -157,6 +183,13 @@
                     safeSeller = seller.replace("'", "''");
                 }
 
+                if (showingSimilar) {
+                    size = similarSize;
+                    gender = similarGender;
+                    minPrice = similarMinPrice;
+                    maxPrice = similarMaxPrice;
+                }
+
                 StringBuilder whereT = new StringBuilder(" WHERE 1=1");
                 StringBuilder whereB = new StringBuilder(" WHERE 1=1");
                 StringBuilder whereS = new StringBuilder(" WHERE 1=1");
@@ -205,6 +238,16 @@
                     whereT.append(" AND u.usernameValue = '").append(safeSeller).append("'");
                     whereB.append(" AND u.usernameValue = '").append(safeSeller).append("'");
                     whereS.append(" AND u.usernameValue = '").append(safeSeller).append("'");
+                }
+
+                if (showingSimilar && similarId != null && !similarId.isEmpty()) {
+                    if ("tops".equals(similarTo)) {
+                        whereT.append(" AND t.topIdValue != ").append(similarId);
+                    } else if ("bottoms".equals(similarTo)) {
+                        whereB.append(" AND b.bottomIdValue != ").append(similarId);
+                    } else if ("shoes".equals(similarTo)) {
+                        whereS.append(" AND s.shoeIdValue != ").append(similarId);
+                    }
                 }
 
                 String sqlTops =
@@ -275,6 +318,12 @@
                     } else if ("shoes".equals(currentItemType)) {
                         idParamName = "shoeIdValue";
                     }
+
+                    double price = rs.getDouble("minimumBidPriceValue");
+                    double simMinPrice = Math.round(price * 0.9 * 100.0) / 100.0;
+                    double simMaxPrice = Math.round(price * 1.1 * 100.0) / 100.0;
+                    String itemSize = rs.getString("sizeValue");
+                    String itemGender = rs.getString("genderValue");
 %>
 
 <div style="border:1px solid #ccc; margin:10px; padding:10px;">
@@ -291,11 +340,24 @@
     <p><strong>Condition:</strong> <%= rs.getString("conditionValue") %></p>
     <p><strong>Price:</strong> $<%= rs.getString("minimumBidPriceValue") %></p>
 
-    <form method="get" action="bidHistory.jsp" style="margin-bottom:10px;">
+    <form method="get" action="bidHistory.jsp" style="display:inline;">
         <input type="hidden" name="itemType" value="<%= currentItemType %>" />
         <input type="hidden" name="itemIdValue" value="<%= itemId %>" />
         <input type="submit" value="View Bid History" />
     </form>
+
+    <form method="get" action="searchResults.jsp" style="display:inline;">
+        <input type="hidden" name="itemType" value="any" />
+        <input type="hidden" name="similarTo" value="<%= currentItemType %>" />
+        <input type="hidden" name="similarId" value="<%= itemId %>" />
+        <input type="hidden" name="similarSize" value="<%= itemSize != null ? itemSize : "" %>" />
+        <input type="hidden" name="similarGender" value="<%= itemGender != null ? itemGender : "" %>" />
+        <input type="hidden" name="similarMinPrice" value="<%= simMinPrice %>" />
+        <input type="hidden" name="similarMaxPrice" value="<%= simMaxPrice %>" />
+        <input type="submit" value="Show Similars" />
+    </form>
+
+    <br/><br/>
 
     <input type='button'
            value='Create Bid'
@@ -420,6 +482,13 @@
         if ("Any Size".equalsIgnoreCase(size))     size   = null;
         if ("Any Color".equalsIgnoreCase(color))   color  = null;
 
+        if (showingSimilar) {
+            size = similarSize;
+            gender = similarGender;
+            minPrice = similarMinPrice;
+            maxPrice = similarMaxPrice;
+        }
+
         String tableAlias = "i";
         StringBuilder sql =
                 new StringBuilder("SELECT " + tableAlias + ".*, u.usernameValue AS sellerUsername " +
@@ -490,6 +559,20 @@
             sql.append(" AND u.usernameValue = '").append(safeSeller).append("'");
         }
 
+        if (showingSimilar && similarId != null && !similarId.isEmpty() && itemType.equals(similarTo)) {
+            String idColumn = null;
+            if ("tops".equals(itemType)) {
+                idColumn = "topIdValue";
+            } else if ("bottoms".equals(itemType)) {
+                idColumn = "bottomIdValue";
+            } else if ("shoes".equals(itemType)) {
+                idColumn = "shoeIdValue";
+            }
+            if (idColumn != null) {
+                sql.append(" AND ").append(tableAlias).append(".").append(idColumn).append(" != ").append(similarId);
+            }
+        }
+
         if ("price".equalsIgnoreCase(sortBy)) {
             if ("desc".equalsIgnoreCase(sortOrder)) {
                 sql.append(" ORDER BY ").append(tableAlias).append(".minimumBidPriceValue DESC");
@@ -529,6 +612,13 @@
             String sellerLink =
                     "searchResults.jsp?itemType=any&searchSeller=" +
                             java.net.URLEncoder.encode(sellerUsername, "UTF-8");
+
+            double price = rs.getDouble("minimumBidPriceValue");
+            double simMinPrice = Math.round(price * 0.9 * 100.0) / 100.0;
+            double simMaxPrice = Math.round(price * 1.1 * 100.0) / 100.0;
+            String itemSize = rs.getString("sizeValue");
+            String itemGender = rs.getString("genderValue");
+            String itemId = rs.getString(idCol);
 %>
 
 <div style="border:1px solid #ccc; margin:10px; padding:10px;">
@@ -548,12 +638,25 @@
     <p><strong>Price:</strong> $<%= rs.getString("minimumBidPriceValue") %></p>
 
     <% if (idCol != null && idParamName != null) { %>
-    <form method="get" action="bidHistory.jsp" style="margin-bottom:10px;">
+    <form method="get" action="bidHistory.jsp" style="display:inline;">
         <input type="hidden" name="itemType" value="<%= itemType %>" />
         <input type="hidden" name="itemIdValue" value="<%= rs.getString(idCol) %>" />
         <input type="submit" value="View Bid History" />
     </form>
     <% } %>
+
+    <form method="get" action="searchResults.jsp" style="display:inline;">
+        <input type="hidden" name="itemType" value="any" />
+        <input type="hidden" name="similarTo" value="<%= itemType %>" />
+        <input type="hidden" name="similarId" value="<%= itemId != null ? itemId : "" %>" />
+        <input type="hidden" name="similarSize" value="<%= itemSize != null ? itemSize : "" %>" />
+        <input type="hidden" name="similarGender" value="<%= itemGender != null ? itemGender : "" %>" />
+        <input type="hidden" name="similarMinPrice" value="<%= simMinPrice %>" />
+        <input type="hidden" name="similarMaxPrice" value="<%= simMaxPrice %>" />
+        <input type="submit" value="Show Similars" />
+    </form>
+
+    <br/><br/>
 
     <input type='button'
            value='Create Bid'
