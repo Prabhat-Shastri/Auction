@@ -8,8 +8,7 @@
         </head>
 
         <body>
-            <h3>User: <%= session.getAttribute("username") %>
-            </h3>
+<h3>User: <%= session.getAttribute("username") %></h3>
             <h1>Welcome to Thrift Shop</h1>
 
             <nav>
@@ -17,6 +16,7 @@
                     <li><a href="tops.jsp">Tops</a></li>
                     <li><a href="bottoms.jsp">Bottoms</a></li>
                     <li><a href="shoes.jsp">Shoes</a></li>
+                    <li><a href="sellers.jsp">Sellers</a></li>
                     <li><a href="notifications.jsp">Notifications</a></li>
                     <li><a href="profile.jsp">Profile</a></li>
                 </ul>
@@ -26,16 +26,21 @@
 
         <body>
             <script>
-
                 document.addEventListener("DOMContentLoaded", function () {
                     // Search Form Toggling
                     document.getElementById('searchTypeSelect').addEventListener("change", function () {
                         const value = this.value;
-                        const forms = ['searchFormTops', 'searchFormBottoms', 'searchFormShoes'];
-                        const buttons = ['searchTopSubmit', 'searchBottomSubmit', 'searchShoeSubmit'];
+                        const forms = ['searchFormTops', 'searchFormBottoms', 'searchFormShoes', 'searchFormAny'];
+                        const buttons = ['searchTopSubmit', 'searchBottomSubmit', 'searchShoeSubmit', 'searchAnySubmit'];
 
-                        forms.forEach(id => document.getElementById(id).style.display = 'none');
-                        buttons.forEach(id => document.getElementById(id).style.display = 'none');
+                        forms.forEach(id => {
+                            const el = document.getElementById(id);
+                            if (el) el.style.display = 'none';
+                        });
+                        buttons.forEach(id => {
+                            const el = document.getElementById(id);
+                            if (el) el.style.display = 'none';
+                        });
 
                         if (value === "tops") {
                             document.getElementById('searchFormTops').style.display = "block";
@@ -46,6 +51,9 @@
                         } else if (value === "shoes") {
                             document.getElementById('searchFormShoes').style.display = "block";
                             document.getElementById('searchShoeSubmit').style.display = "block";
+                        } else if (value === "any") {
+                            document.getElementById('searchFormAny').style.display = "block";
+                            document.getElementById('searchAnySubmit').style.display = "block";
                         }
                     });
 
@@ -78,7 +86,7 @@
                             document.getElementById('BottomSubmit').style.display = "none";
                         }
                     })
-                })
+                });
 
                 function createAuction() {
                     document.getElementById('auctionFillOutForm').style.display = "block";
@@ -92,7 +100,6 @@
                         searchDiv.style.display = "none";
                     }
                 }
-
             </script>
 
             <button onclick='toggleSearch()'>Search Items</button>
@@ -101,14 +108,55 @@
                 <label for="searchType">Choose Item Type to Search: </label>
                 <select name="searchType" id="searchTypeSelect">
                     <option value="selectAnItem" disabled selected>Select Item...</option>
+                    <option value="any">Any Item Type</option>
                     <option value="tops">Tops</option>
                     <option value="bottoms">Bottoms</option>
                     <option value="shoes">Shoes</option>
                 </select>
 
+                <!-- Any item type search form -->
+                <form action="searchResults.jsp" method="POST">
+                    <input type="hidden" name="itemType" value="any">
+                    <div id="searchFormAny" style="display: none;">
+                        <p>Search across Tops, Bottoms and Shoes</p>
+                        <label>Seller Username:</label> <input type="text" name="searchSeller" placeholder="Any seller">
+                        <label>Gender: </label>
+                        <select name="searchGender">
+                            <option value="" selected>Any Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Unisex">Unisex</option>
+                        </select>
+                        <label>Size:</label>
+                        <input type="text" name="searchSize" placeholder="Any Size">
+                        <label>Color: </label>
+                        <select name="searchColor">
+                            <option value="" selected>Any Color</option>
+                            <option value="Black">Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Gray">Gray</option>
+                            <option value="White">White</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Red">Red</option>
+                            <option value="Pink">Pink</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Green">Green</option>
+                            <option value="Purple">Purple</option>
+                        </select>
+                        <label>Description contains: </label> <input type="text" name="searchDescription">
+                        <label>Condition: </label> <input type="text" name="searchCondition">
+                        <label>Min Price:</label> <input type="number" name="searchMinPrice" min="0">
+                        <label>Max Price:</label> <input type="number" name="searchMaxPrice" min="0">
+                    </div>
+                    <input type="submit" value="Search All Items" id="searchAnySubmit" style="display: none;" />
+                </form>
+
+                <!-- Tops search form -->
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="tops">
                     <div id="searchFormTops" style="display: none;">
+                        <label>Seller Username:</label> <input type="text" name="searchSeller" placeholder="Any seller">
                         <label>Gender: </label>
                         <select name="searchTopGender">
                             <option value="" selected>Any Gender</option>
@@ -142,20 +190,23 @@
                             <option value="Green">Green</option>
                             <option value="Purple">Purple</option>
                         </select>
-                        <label>Front Length (cm): </label> <input type="number" name="searchTopFrontLength" min="0" step="0.1">
-                        <label>Chest Length (cm): </label> <input type="number" name="searchTopChestLength" min="0" step="0.1">
-                        <label>Sleeve Length (cm): </label> <input type="number" name="searchTopSleeveLength" min="0" step="0.1">
+            <label>Front Length (cm): </label> <input type="number" name="searchTopFrontLength" min="0" step="0.1">
+            <label>Chest Length (cm): </label> <input type="number" name="searchTopChestLength" min="0" step="0.1">
+            <label>Sleeve Length (cm): </label> <input type="number" name="searchTopSleeveLength" min="0" step="0.1">
                         <label>Description: </label> <input type="text" name="searchTopDescription">
                         <label>Condition: </label> <input type="text" name="searchTopCondition">
                         <label>Min Price:</label> <input type="number" name="searchMinPrice" min="0">
                         <label>Max Price:</label> <input type="number" name="searchMaxPrice" min="0">
+
                     </div>
                     <input type="submit" value="Search Tops" id="searchTopSubmit" style="display: none;" />
                 </form>
 
+                <!-- Bottoms search form -->
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="bottoms">
                     <div id="searchFormBottoms" style="display: none;">
+                        <label>Seller Username:</label> <input type="text" name="searchSeller" placeholder="Any seller">
                         <label>Gender: </label>
                         <select name="searchBottomGender">
                             <option value="" selected>Any Gender</option>
@@ -189,11 +240,11 @@
                             <option value="Green">Green</option>
                             <option value="Purple">Purple</option>
                         </select>
-                        <label>Waist Length (cm): </label> <input type="number" name="searchBottomWaistLength" min="0" step="0.1">
-                        <label>Inseam Length (cm): </label> <input type="number" name="searchBottomInseamLength" min="0" step="0.1">
-                        <label>Outseam Length (cm): </label> <input type="number" name="searchBottomOutseamLength" min="0" step="0.1">
-                        <label>Hip Length (cm): </label> <input type="number" name="searchBottomHipLength" min="0" step="0.1">
-                        <label>Rise Length (cm): </label> <input type="number" name="searchBottomRiseLength" min="0" step="0.1">
+            <label>Waist Length (cm): </label> <input type="number" name="searchBottomWaistLength" min="0" step="0.1">
+            <label>Inseam Length (cm): </label> <input type="number" name="searchBottomInseamLength" min="0" step="0.1">
+            <label>Outseam Length (cm): </label> <input type="number" name="searchBottomOutseamLength" min="0" step="0.1">
+            <label>Hip Length (cm): </label> <input type="number" name="searchBottomHipLength" min="0" step="0.1">
+            <label>Rise Length (cm): </label> <input type="number" name="searchBottomRiseLength" min="0" step="0.1">
                         <label>Description: </label> <input type="text" name="searchBottomDescription">
                         <label>Condition: </label> <input type="text" name="searchBottomCondition">
                         <label>Min Price:</label> <input type="number" name="searchMinPrice" min="0">
@@ -202,9 +253,11 @@
                     <input type="submit" value="Search Bottoms" id="searchBottomSubmit" style="display: none;" />
                 </form>
 
+                <!-- Shoes search form -->
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="shoes">
                     <div id="searchFormShoes" style="display: none;">
+                        <label>Seller Username:</label> <input type="text" name="searchSeller" placeholder="Any seller">
                         <label>Gender: </label>
                         <select name="searchShoeGender">
                             <option value="" selected>Any Gender</option>
@@ -216,9 +269,7 @@
                         <select name="searchShoeSize">
                             <option value="" selected>Any Size</option>
                             <% for(int i=1; i<=23; i++) { %>
-                                <option value="<%=i%>">
-                                    <%=i%>
-                                </option>
+                <option value="<%=i%>"><%=i%></option>
                                 <% } %>
                         </select>
                         <label>Color: </label>
@@ -255,6 +306,7 @@
                 </select>
             </div>
 
+            <!-- create auction forms (same as your original, not changed) -->
             <form action="tops.jsp" method="POST">
                 <div id="auctionFillOutFormTops" style="display: none;">
                     <label for="topGender">Gender: </label>
@@ -303,8 +355,7 @@
                     <label for="Minimum">Minimum Bid Price (USD): </label>
                     <input type="number" min="0" name="Minimum" id="MinimumBidConditionTop" required>
                     <label for="StartingOrCurrentBidPrice">Starting Bid Price(USD): </label>
-                    <input type="number" min="0" name="StartingOrCurrentBidPrice" id="StartingOrCurrentBidPriceTop"
-                        required>
+        <input type="number" min="0" name="StartingOrCurrentBidPrice" id="StartingOrCurrentBidPriceTop" required>
                     <label for="AuctionCloseDateTops">Auction Close Date: </label>
                     <input type="date" name="AuctionCloseDateTops" id="AuctionCloseTopsDate" required>
                     <label for="AuctionCloseTime">Auction Close Time: </label>
