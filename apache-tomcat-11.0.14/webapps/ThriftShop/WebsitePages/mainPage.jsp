@@ -121,7 +121,7 @@
                 <label for="Condition">Condition: </label>
                 <input name="Condition" id="ConditionTop" maxLength="200" required>
                 <label for="Minimum">Minimum Bid Price (USD): </label>
-                <input type="number" min="0" name="Minimum" id="MinimumBidConditionTop">
+                <input type="number" min="0" name="Minimum" id="MinimumBidConditionTop" required>
                 <label for="StartingOrCurrentBidPrice">Starting Bid Price(USD): </label>
                 <input type="number" min="0" name="StartingOrCurrentBidPrice" id="StartingOrCurrentBidPriceTop"
                        required>
