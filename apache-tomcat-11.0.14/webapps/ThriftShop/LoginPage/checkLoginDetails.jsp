@@ -7,13 +7,18 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thrift
 "Xcrafty!3my");
 Statement st = con.createStatement();
 ResultSet rs;
-rs = st.executeQuery("select * from users where usernameValue ='" + username + "' and passwordValue='" + password + "'");
+rs = st.executeQuery("select userIdValue from users where usernameValue ='" + username + "' and passwordValue='" + password + "'");
 if (rs.next()) {
-session.setAttribute("user", username); 
+int userIdValue = rs.getInt("userIdValue");
+session.setAttribute("userIdValue", userIdValue);
+session.setAttribute("username", username); 
 out.println("welcome " + username);
-out.println("<a href='logout.jsp'>Log out</a>");
 response.sendRedirect("success.jsp");
 } else {
 out.println("Invalid password <a href='login.jsp'>try again</a>");
 }
+
+rs.close();
+st.close();
+con.close();
 %>
