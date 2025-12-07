@@ -9,6 +9,7 @@
 
     String username = (String) session.getAttribute("username");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
