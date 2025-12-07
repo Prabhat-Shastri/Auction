@@ -38,4 +38,4 @@ con.close();
 response.sendRedirect("tops.jsp");
 %>
 
-  
+//should update current bid price in tops table by adding to the current bid price

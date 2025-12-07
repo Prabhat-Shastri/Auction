@@ -2,8 +2,14 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.sql.*" %>
 <%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+
 Class.forName("com.mysql.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/thriftShop","root", "Xcrafty!3my");
+con.setAutoCommit(true);
+con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 Statement st = con.createStatement();
 %>
 <script>
@@ -104,6 +110,7 @@ for(int i = 0; i < topIdValueOfItemsBiddedOnByBidder.size(); i++) {
     if(buyersBidPriceResult.next()) {  
         buyersBidPriceValue = buyersBidPriceResult.getInt("newBidValue"); 
     }
+    buyersBidPriceResult.close();
 
     String currentBidPrice = "select newBidValue from topsIncrementBids where topIdValue = '" + topIdValueOfItemsBiddedOnByBidder.get(i) + "' order by bidIdValue desc LIMIT 1";
     ResultSet currentBidPriceResult = st.executeQuery(currentBidPrice);
@@ -114,7 +121,37 @@ for(int i = 0; i < topIdValueOfItemsBiddedOnByBidder.size(); i++) {
     }
 
     if(buyersBidPriceValue != null && currentBidPriceValue != null && buyersBidPriceValue < currentBidPriceValue) {
-        String topInformation = "select * from tops where topIdValue = '" + topIdValueOfItemsBiddedOnByBidder.get(i) + "'";  // FIXED: select all columns
+
+        // CHECK IF USER HAS AUTOMATIC BID SET UP
+        String biddersMaxBidValue = "select bidMaxValue, bidIncrementValue from topsIncrementBids where buyerIdValue = '" + userIdValue + "' and topIdValue = '" + topIdValueOfItemsBiddedOnByBidder.get(i) + "' order by bidIdValue desc LIMIT 1";
+        ResultSet biddersMaxBidValueResult = st.executeQuery(biddersMaxBidValue);
+        Integer biddersMaxBidValueValue = null;
+        Integer usersBidIncrementValue = null;
+        
+        if(biddersMaxBidValueResult.next()) {  
+            biddersMaxBidValueValue = biddersMaxBidValueResult.getInt("bidMaxValue");
+            usersBidIncrementValue = biddersMaxBidValueResult.getInt("bidIncrementValue");
+        }
+        
+        if(biddersMaxBidValueValue != null && usersBidIncrementValue != null && 
+           biddersMaxBidValueValue != 0 && usersBidIncrementValue != 0 &&
+           (currentBidPriceValue + usersBidIncrementValue) <= biddersMaxBidValueValue) {
+            
+            Integer newBidValueWithIncrementedPrice = currentBidPriceValue + usersBidIncrementValue;
+            counterValue++; 
+            
+            String updateCurrentBidPriceInTopsTable = "update tops set startingOrCurrentBidPriceValue = '" + newBidValueWithIncrementedPrice + "' where topIdValue = '" + topIdValueOfItemsBiddedOnByBidder.get(i) + "'";
+            st.executeUpdate(updateCurrentBidPriceInTopsTable);
+            
+            String insertnewBidValueWithIncrementedPriceinTopsIncrementBids = "insert into topsIncrementBids (bidIdValue, topIdValue, buyerIdValue, newBidValue, bidIncrementValue, bidMaxValue) values ('" + counterValue + "', '" + topIdValueOfItemsBiddedOnByBidder.get(i) + "','" + userIdValue + "' ,'" + newBidValueWithIncrementedPrice + "' ,'" + usersBidIncrementValue + "', '" + biddersMaxBidValueValue + "')";
+            st.executeUpdate(insertnewBidValueWithIncrementedPriceinTopsIncrementBids);
+            
+            // UPDATE currentBidPriceValue FOR DISPLAY
+            currentBidPriceValue = newBidValueWithIncrementedPrice;
+            buyersBidPriceValue = newBidValueWithIncrementedPrice;
+        }
+
+        String topInformation = "select * from tops where topIdValue = '" + topIdValueOfItemsBiddedOnByBidder.get(i) + "'";  
         ResultSet topInformationResult = st.executeQuery(topInformation);
         Integer topInformationValue = topIdValueOfItemsBiddedOnByBidder.get(i);
 
@@ -149,29 +186,36 @@ for(int i = 0; i < topIdValueOfItemsBiddedOnByBidder.size(); i++) {
             out.println("<p>Starting or Current Bid Price: " + startingOrCurrentBidPriceValueDisplay + "</p>");
             out.println("<p>Auction Close Date: " + auctionCloseDateValueDisplay + "</p>");
             out.println("<p>Auction Close Time: " + auctionCloseTimeValueDisplay + "</p>");
-            out.println("<p>The bid price for the following top has gone to " + currentBidPriceValue + "</p>");
+            
+            // CHECK AGAIN IF MAX BID EXCEEDED (for display message)
+            if(biddersMaxBidValueValue != null && currentBidPriceValue != null && 
+               biddersMaxBidValueValue != 0 && currentBidPriceValue > biddersMaxBidValueValue) {
+                out.println("<p>The bid price for the following top has gone to " + currentBidPriceValue + ", which exceeds your Maximum Bid Price of " + biddersMaxBidValueValue + ". If you want to change this please create a new bid!</p>");
+            }
+            else{
+                out.println("<p>The bid price for the following top has gone to " + currentBidPriceValue + ". You have been outbid.</p>");
+            }
+            
             out.println("<input type='submit' value='Create New Bid' onclick='createBid(" + counterValue + ")' id='TopCreateBid" + counterValue + "' style='margin-bottom: 100px;'>");
             out.println("<form method='post' action='bidPage.jsp'>");
             out.println("<input type='hidden' name='topIdValue' value='" + topInformationValue +"'>");
             out.println("<label for='setNewBid' id='SetNewBidLabel" + counterValue + "' style='display: none;'>Set Bid (USD): </label>");
             out.println("<input type='number' name='setNewBid' id='SetNewBid" + counterValue + "' style='display: none;' required>");
-            out.println("<label for='setAutomaticBid' id='SetAutomaticBidLabel" + counterValue + "' style='display: none;'>Set Automatic Bid: </label>");
+            out.println("<label for='setAutomaticBid' id='SetAutomaticBidLabel" + counterValue + "' style='display: none;'>Set Automatic Bid : </label>");
             out.println("<select name='setAutomaticBid' id='SetAutomaticBid" + counterValue + "' style='display: none;' required>");
             out.println("<option value='selectAnItem' disabled selected>Select Item...</option>");
             out.println("<option value='true' id='true'>Yes</option>");
             out.println("<option value='false' id='false'>No</option>");
             out.println("</select>");
-            out.println("<label for='maxBidPrice' id='SetAutomaticBidPriceLabel" + counterValue + "' style='display: none;'>Set Bid Price (USD): </label>");
+            out.println("<label for='maxBidPrice' id='SetAutomaticBidPriceLabel" + counterValue + "' style='display: none;'>Set Max Bid Price (USD): </label>");
             out.println("<input type='number' name='maxBidPrice' id='SetAutomaticBidPrice" + counterValue + "' style='display: none;'>");
             out.println("<label for='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPriceLabel" + counterValue + "' style='display: none;'>Bid Increment Price (USD): </label>");
             out.println("<input type='number' name='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPrice" + counterValue + "' style='display: none;'>");
-            out.println("<input type='submit' value='Cancel Bid' onclick='removeBid(" + counterValue + ")' id='cancel" + counterValue + "' style='display: none;'>");
+            out.println("<input type='button' value='Cancel Bid' onclick='removeBid(" + counterValue + ")' id='cancel" + counterValue + "' style='display: none;'>");
             out.println("<input type='submit' value='Place Bid' onclick='placeBid(" + counterValue +")' id='TopPlaceBid" + counterValue + "' style='display: none;'>");
             out.println("</form>");
             out.println("</div>");
             counterValue++;
-
-            out.println("</div>");
         }
     }
     else if (buyersBidPriceValue != null && currentBidPriceValue != null && buyersBidPriceValue.equals(currentBidPriceValue)) {
@@ -214,6 +258,8 @@ for(int i = 0; i < topIdValueOfItemsBiddedOnByBidder.size(); i++) {
         }
     }
 }
-%>
 
-//add the logic for when the value of the bid increases and then we want to automatically update the bid value and then if the bid value added exceed the current price then we want to ask the user do they want to bid extra which will surpass the bid or do we want to just keep the current bid and add the remaining amount to reach the max
+
+st.close();
+con.close();    
+%>
