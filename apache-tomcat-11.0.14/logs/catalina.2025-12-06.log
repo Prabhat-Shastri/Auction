@@ -1,0 +1,1115 @@
+06-Dec-2025 18:36:55.305 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:36:55.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:36:55.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 18:36:55.326 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 18:36:55.505 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:36:55.530 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [332] milliseconds
+06-Dec-2025 18:36:55.551 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 18:36:55.551 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 18:36:55.555 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 18:36:55.843 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 18:36:55.862 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [307] ms
+06-Dec-2025 18:36:55.864 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:36:55.871 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [340] milliseconds
+06-Dec-2025 18:49:04.106 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 18:49:04.106 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:49:04.108 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 18:49:04.111 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 18:49:04.112 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 18:49:04.116 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:49:04.120 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:49:44.830 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 18:49:44.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:49:44.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:49:44.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 18:49:44.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 18:49:44.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 18:49:44.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 18:49:44.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:49:44.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 18:49:44.851 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 18:49:45.029 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:49:45.050 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [318] milliseconds
+06-Dec-2025 18:49:45.071 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 18:49:45.071 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 18:49:45.075 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 18:49:45.367 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 18:49:45.386 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [311] ms
+06-Dec-2025 18:49:45.388 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:49:45.395 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [344] milliseconds
+06-Dec-2025 18:54:18.573 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 18:54:18.573 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:54:18.575 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 18:54:18.578 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 18:54:18.578 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 18:54:18.581 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:54:18.583 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:55:32.583 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:55:32.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:55:32.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 18:55:32.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:55:32.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 18:55:32.601 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 18:55:32.768 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:55:32.789 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [301] milliseconds
+06-Dec-2025 18:55:32.807 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 18:55:32.807 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 18:55:32.811 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 18:55:33.105 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 18:55:33.122 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [311] ms
+06-Dec-2025 18:55:33.123 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:55:33.131 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [341] milliseconds
+06-Dec-2025 18:58:07.756 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 18:58:07.757 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:58:07.759 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 18:58:07.763 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 18:58:07.763 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 18:58:07.766 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:58:07.768 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:58:14.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 18:58:14.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 18:58:14.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 18:58:14.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 18:58:14.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 18:58:14.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 18:58:14.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 18:58:14.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 18:58:14.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 18:58:14.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:58:14.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 18:58:14.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:58:14.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 18:58:14.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 18:58:14.592 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 18:58:14.763 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:58:14.782 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [305] milliseconds
+06-Dec-2025 18:58:14.801 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 18:58:14.801 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 18:58:14.805 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 18:58:15.109 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 18:58:15.128 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [323] ms
+06-Dec-2025 18:58:15.130 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 18:58:15.137 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [353] milliseconds
+06-Dec-2025 19:09:21.669 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:09:21.670 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:09:21.673 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:09:21.686 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:09:21.686 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:09:21.691 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:09:21.698 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:09:25.563 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:09:25.565 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:09:25.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:09:25.572 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:09:25.572 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:09:25.572 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:09:25.572 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:09:25.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:09:25.580 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:09:25.744 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:09:25.763 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [290] milliseconds
+06-Dec-2025 19:09:25.782 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:09:25.782 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:09:25.786 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:09:26.073 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:09:26.090 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [304] ms
+06-Dec-2025 19:09:26.091 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:09:26.098 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [334] milliseconds
+06-Dec-2025 19:14:01.335 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:14:01.336 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:14:01.338 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:14:01.341 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:14:01.342 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:14:01.347 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:14:01.349 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:14:03.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:14:03.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:14:03.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:14:03.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:14:03.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:14:03.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:14:03.693 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:14:03.862 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:14:03.880 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [298] milliseconds
+06-Dec-2025 19:14:03.899 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:14:03.900 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:14:03.903 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:14:04.198 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:14:04.216 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [312] ms
+06-Dec-2025 19:14:04.217 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:14:04.224 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [342] milliseconds
+06-Dec-2025 19:16:04.598 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:16:04.598 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:16:04.600 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:16:04.604 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:16:04.605 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:16:04.609 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:16:04.611 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:16:13.087 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:16:13.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:16:13.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:16:13.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:16:13.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:16:13.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:16:13.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:16:13.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:16:13.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:16:13.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:16:13.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:16:13.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:16:13.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:16:13.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:16:13.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:16:13.104 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:16:13.273 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:16:13.293 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [298] milliseconds
+06-Dec-2025 19:16:13.312 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:16:13.313 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:16:13.316 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:16:13.621 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:16:13.638 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [322] ms
+06-Dec-2025 19:16:13.640 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:16:13.647 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [353] milliseconds
+06-Dec-2025 19:22:37.762 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:22:37.763 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:22:37.765 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:22:37.769 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:22:37.770 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:22:37.774 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:22:37.777 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:22:41.611 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:22:41.614 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:22:41.614 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:22:41.614 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:22:41.614 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:22:41.614 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:22:41.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:22:41.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:22:41.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:22:41.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:22:41.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:22:41.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:22:41.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:22:41.624 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:22:41.624 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:22:41.624 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:22:41.624 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:22:41.624 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:22:41.624 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:22:41.631 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:22:41.793 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:22:41.812 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [289] milliseconds
+06-Dec-2025 19:22:41.833 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:22:41.833 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:22:41.837 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:22:42.181 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:22:42.200 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [362] ms
+06-Dec-2025 19:22:42.201 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:22:42.208 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [395] milliseconds
+06-Dec-2025 19:31:28.410 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:31:28.411 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:31:28.413 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:31:28.418 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:31:28.418 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:31:28.422 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:31:28.424 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:31:32.118 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:31:32.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:31:32.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:31:32.127 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:31:32.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:31:32.129 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:31:32.129 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:31:32.136 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:31:32.299 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:31:32.318 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [292] milliseconds
+06-Dec-2025 19:31:32.337 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:31:32.337 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:31:32.341 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:31:32.633 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:31:32.650 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [308] ms
+06-Dec-2025 19:31:32.652 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:31:32.658 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [339] milliseconds
+06-Dec-2025 19:46:06.207 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:46:06.208 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:46:06.210 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:46:06.216 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:46:06.217 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:46:06.228 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:46:06.234 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:46:08.453 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:46:08.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:46:08.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:46:08.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:46:08.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:46:08.470 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:46:08.601 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:46:08.615 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [233] milliseconds
+06-Dec-2025 19:46:08.631 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:46:08.631 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:46:08.634 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:46:08.854 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:46:08.869 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [235] ms
+06-Dec-2025 19:46:08.870 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:46:08.875 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [259] milliseconds
+06-Dec-2025 19:56:52.811 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 19:56:52.812 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:56:52.814 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 19:56:52.820 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 19:56:52.820 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 19:56:52.824 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:56:52.838 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:56:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:56:57.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:56:57.972 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 19:56:57.972 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 19:56:57.972 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 19:56:57.972 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 19:56:57.973 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 19:56:57.978 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 19:56:58.103 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:56:58.117 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [222] milliseconds
+06-Dec-2025 19:56:58.131 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 19:56:58.131 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 19:56:58.134 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 19:56:58.368 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 19:56:58.381 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [247] ms
+06-Dec-2025 19:56:58.382 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 19:56:58.388 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [270] milliseconds
+06-Dec-2025 20:18:55.705 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:18:55.706 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:18:55.707 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:18:55.712 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:18:55.712 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:18:55.717 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:18:55.719 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:18:57.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:18:57.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:18:57.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:18:57.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:18:57.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:18:57.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:18:57.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:18:57.958 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:18:57.958 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:18:57.958 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:18:57.958 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:18:57.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:18:57.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:18:57.964 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:18:57.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:18:57.970 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:18:58.103 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:18:58.117 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [235] milliseconds
+06-Dec-2025 20:18:58.133 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:18:58.133 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:18:58.136 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:18:58.378 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:18:58.392 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [256] ms
+06-Dec-2025 20:18:58.394 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:18:58.399 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [281] milliseconds
+06-Dec-2025 20:23:25.341 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:23:25.342 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:23:25.347 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:23:25.354 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:23:25.354 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:23:25.359 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:23:25.373 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:23:27.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:23:27.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:23:27.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:23:27.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:23:27.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:23:27.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:23:27.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:23:27.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:23:27.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:23:27.586 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:23:27.707 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:23:27.721 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [213] milliseconds
+06-Dec-2025 20:23:27.735 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:23:27.735 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:23:27.738 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:23:27.961 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:23:27.974 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [236] ms
+06-Dec-2025 20:23:27.976 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:23:27.981 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [259] milliseconds
+06-Dec-2025 20:28:59.955 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:28:59.955 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:28:59.957 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:28:59.962 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:28:59.962 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:28:59.966 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:28:59.968 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:29:02.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:29:02.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:29:02.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:29:02.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:29:02.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:29:02.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:29:02.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:29:02.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:29:02.195 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:29:02.318 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:29:02.334 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [223] milliseconds
+06-Dec-2025 20:29:02.349 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:29:02.349 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:29:02.352 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:29:02.591 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:29:02.606 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [254] ms
+06-Dec-2025 20:29:02.608 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:29:02.613 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [279] milliseconds
+06-Dec-2025 20:33:06.551 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:33:06.552 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:33:06.553 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:33:06.558 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:33:06.558 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:33:06.563 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:33:06.565 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:33:08.798 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:33:08.800 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:33:08.801 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:33:08.806 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:33:08.806 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:33:08.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:33:08.812 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:33:08.940 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:33:08.955 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [230] milliseconds
+06-Dec-2025 20:33:08.969 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:33:08.969 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:33:08.972 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:33:09.212 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:33:09.226 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [254] ms
+06-Dec-2025 20:33:09.227 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:33:09.233 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [277] milliseconds
+06-Dec-2025 20:39:38.010 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:39:38.011 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:39:38.013 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:39:38.018 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:39:38.019 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:39:38.023 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:39:38.037 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:39:40.245 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:39:40.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:39:40.248 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:39:40.248 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:39:40.248 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:39:40.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:39:40.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:39:40.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:39:40.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:39:40.258 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:39:40.377 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:39:40.392 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [213] milliseconds
+06-Dec-2025 20:39:40.405 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:39:40.405 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:39:40.408 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:39:40.650 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:39:40.663 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [254] ms
+06-Dec-2025 20:39:40.664 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:39:40.669 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [276] milliseconds
+06-Dec-2025 20:50:33.088 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:50:33.090 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:50:33.092 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:50:33.098 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:50:33.099 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:50:33.105 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:50:33.116 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:50:35.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:50:35.347 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:50:35.354 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:50:35.355 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:50:35.355 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:50:35.355 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:50:35.355 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:50:35.359 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:50:35.487 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:50:35.502 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [230] milliseconds
+06-Dec-2025 20:50:35.518 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:50:35.518 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:50:35.521 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:50:35.774 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:50:35.793 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [272] ms
+06-Dec-2025 20:50:35.795 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:50:35.807 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [304] milliseconds
+06-Dec-2025 20:52:51.529 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 20:52:51.530 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:52:51.531 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 20:52:51.535 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 20:52:51.535 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 20:52:51.538 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:52:51.542 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:52:53.774 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 20:52:53.775 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:52:53.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 20:52:53.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 20:52:53.786 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 20:52:53.909 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:52:53.923 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [219] milliseconds
+06-Dec-2025 20:52:53.940 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 20:52:53.940 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 20:52:53.943 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 20:52:54.200 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 20:52:54.215 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [271] ms
+06-Dec-2025 20:52:54.216 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 20:52:54.222 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [297] milliseconds
+06-Dec-2025 22:20:45.758 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 22:20:45.759 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:20:45.760 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 22:20:45.766 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 22:20:45.766 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 22:20:45.771 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:20:45.783 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:20:48.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:20:48.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:20:48.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 22:20:48.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 22:20:48.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 22:20:48.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 22:20:48.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 22:20:48.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 22:20:48.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 22:20:48.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 22:20:48.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 22:20:48.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 22:20:48.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 22:20:48.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:20:48.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:20:48.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 22:20:48.196 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 22:20:48.351 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:20:48.367 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [371] milliseconds
+06-Dec-2025 22:20:48.384 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 22:20:48.384 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 22:20:48.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 22:20:48.668 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 22:20:48.685 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [297] ms
+06-Dec-2025 22:20:48.686 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:20:48.692 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [324] milliseconds
+06-Dec-2025 22:22:56.493 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 22:22:56.493 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:22:56.495 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 22:22:56.499 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 22:22:56.500 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 22:22:56.503 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:22:56.506 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:22:58.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:22:58.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:22:58.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 22:22:58.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:22:58.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 22:22:58.758 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 22:22:58.876 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:22:58.890 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [211] milliseconds
+06-Dec-2025 22:22:58.903 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 22:22:58.903 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 22:22:58.906 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 22:22:59.132 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 22:22:59.145 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [239] ms
+06-Dec-2025 22:22:59.146 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:22:59.151 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [260] milliseconds
+06-Dec-2025 22:23:21.989 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 22:23:21.989 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:23:21.992 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 22:23:21.999 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:23:22.002 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:23:24.242 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 22:23:24.243 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 22:23:24.243 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 22:23:24.243 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 22:23:24.243 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 22:23:24.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 22:23:24.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 22:23:24.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 22:23:24.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 22:23:24.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:23:24.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:23:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 22:23:24.254 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 22:23:24.377 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:23:24.392 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [221] milliseconds
+06-Dec-2025 22:23:24.407 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 22:23:24.407 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 22:23:24.410 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 22:23:24.661 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 22:23:24.681 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [271] ms
+06-Dec-2025 22:23:24.683 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:23:24.688 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [295] milliseconds
+06-Dec-2025 22:26:38.160 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+06-Dec-2025 22:26:38.164 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:26:38.167 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+06-Dec-2025 22:26:38.178 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ThriftShop] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Dec-2025 22:26:38.178 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ThriftShop] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Dec-2025 22:26:38.183 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:26:38.192 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:26:40.421 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            26.1
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.8
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Homebrew
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:26:40.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:26:40.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/conf/logging.properties
+06-Dec-2025 22:26:40.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Dec-2025 22:26:40.428 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14
+06-Dec-2025 22:26:40.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/temp
+06-Dec-2025 22:26:40.434 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/prabhatshastri/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+06-Dec-2025 22:26:40.566 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:26:40.584 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [232] milliseconds
+06-Dec-2025 22:26:40.598 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Dec-2025 22:26:40.598 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+06-Dec-2025 22:26:40.601 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop]
+06-Dec-2025 22:26:40.860 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Dec-2025 22:26:40.873 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/prabhatshastri/Documents/Auction/apache-tomcat-11.0.14/webapps/ThriftShop] has finished in [272] ms
+06-Dec-2025 22:26:40.874 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Dec-2025 22:26:40.882 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [297] milliseconds

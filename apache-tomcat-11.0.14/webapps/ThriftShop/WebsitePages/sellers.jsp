@@ -29,9 +29,20 @@
         return;
     }
 
-    String jdbcUrl = "jdbc:mysql://localhost:3306/thriftShop";
-    String dbUser  = "root";
-    String dbPass  = "12345";
+    String jdbcUrl = System.getenv("JDBC_URL");
+    if (jdbcUrl == null || jdbcUrl.isEmpty()) {
+        String dbHost = System.getenv("DB_HOST");
+        String dbPort = System.getenv("DB_PORT");
+        String dbName = System.getenv("DB_NAME");
+        if (dbHost == null) dbHost = "localhost";
+        if (dbPort == null) dbPort = "3306";
+        if (dbName == null) dbName = "thriftShop";
+        jdbcUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
+    }
+    String dbUser = System.getenv("DB_USER");
+    if (dbUser == null) dbUser = "root";
+    String dbPass = System.getenv("DB_PASS");
+    if (dbPass == null) dbPass = "12345";
 
     // Query for sellers who have items
     String query =

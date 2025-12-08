@@ -4,12 +4,54 @@
 <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
 <%@ page import="java.time.LocalDate,java.time.LocalTime,java.time.LocalDateTime" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tops - ThriftShop Auction</title>
+    <link rel="stylesheet" href="../css/auction-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="mainPage.jsp" class="logo">🏛️ ThriftShop</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="tops.jsp">Tops</a></li>
+                    <li><a href="bottoms.jsp">Bottoms</a></li>
+                    <li><a href="shoes.jsp">Shoes</a></li>
+                    <li><a href="sellers.jsp">Sellers</a></li>
+                    <li><a href="notifications.jsp">Notifications</a></li>
+                    <li><a href="profile.jsp">Profile</a></li>
+                    <li><a href="../LoginPage/logout.jsp">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">👤 <%=session.getAttribute("username")%></div>
+        </div>
+    </header>
+
+    <div class="container">
 
 <%
     // load MySQL driver
     Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection con = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/thriftShop","root", "12345");
+    String jdbcUrl = System.getenv("JDBC_URL");
+    if (jdbcUrl == null || jdbcUrl.isEmpty()) {
+        String dbHost = System.getenv("DB_HOST");
+        String dbPort = System.getenv("DB_PORT");
+        String dbName = System.getenv("DB_NAME");
+        if (dbHost == null) dbHost = "localhost";
+        if (dbPort == null) dbPort = "3306";
+        if (dbName == null) dbName = "thriftShop";
+        jdbcUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
+    }
+    String dbUser = System.getenv("DB_USER");
+    if (dbUser == null) dbUser = "root";
+    String dbPass = System.getenv("DB_PASS");
+    if (dbPass == null) dbPass = "12345";
+    Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
     Statement st = con.createStatement();
 
     // check login
@@ -17,10 +59,13 @@
         response.sendRedirect("../LoginPage/login.jsp");
         return;
     }
-
-    out.println("<h3>User: " + session.getAttribute("username") + "</h3>");
-    out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
-    out.println("<br/>This is the Tops page<br/><br/>");
+%>
+        <div class="page-header">
+    <h1>👔 Tops</h1>
+    <p>Browse and bid on premium tops</p>
+    <a href="mainPage.jsp" class="btn btn-outline" style="margin-top: 1rem;">← Back to Main Page</a>
+</div>
+<%
 
     // Get Show Similars parameters
     String similarId = request.getParameter("similarId");
@@ -213,7 +258,9 @@
 
     ResultSet rs = st.executeQuery(topsQuery.toString());
     boolean found = false;
-
+    
+    out.println("<div class='items-grid'>");
+    
     while (rs.next()) {
         found = true;
         String sellerUsername  = rs.getString("sellerUsername");
@@ -235,63 +282,95 @@
         double simMinPrice = Math.round(minimumBidPriceValueDisplay * 0.9 * 100.0) / 100.0;
         double simMaxPrice = Math.round(minimumBidPriceValueDisplay * 1.1 * 100.0) / 100.0;
 
-        out.println("<div>");
-        out.println("<p><strong>Seller:</strong> " + sellerUsername + "</p>");
-        out.println("<p><strong>Gender:</strong> " + genderValueDisplay + "</p>");
-        out.println("<p><strong>Size:</strong> " + sizeValueDisplay + "</p>");
-        out.println("<p><strong>Color:</strong> " + colorValueDisplay + "</p>");
-        out.println("<p><strong>Front Length:</strong> " + frontLengthValueDisplay + "</p>");
-        out.println("<p><strong>Chest Length:</strong> " + chestLengthValueDisplay + "</p>");
-        out.println("<p><strong>Sleeve Length:</strong> " + sleeveLengthValueDisplay + "</p>");
-        out.println("<p><strong>Description:</strong> " + descriptionValueDisplay + "</p>");
-        out.println("<p><strong>Condition:</strong> " + conditionValueDisplay + "</p>");
+        // Only show minimum bid price (reserve) to the seller who created the auction
+        Integer currentUserId = (Integer) session.getAttribute("userIdValue");
+        String sellerIdStr = rs.getString("auctionSellerIdValue");
+        boolean isSeller = (currentUserId != null && sellerIdStr != null && 
+                           currentUserId.toString().equals(sellerIdStr));
 
-        if (minimumBidPriceValueDisplay != 0.0f) {
-            out.println("<p><strong>Minimum Bid Price: </strong>" + minimumBidPriceValueDisplay + "</p>");
-        } else {
-            out.println("<p><strong>Minimum Bid Price:</strong> None</p>");
+        out.println("<div class='item-card'>");
+        out.println("<div class='item-image'>👔</div>");
+        out.println("<div class='item-body'>");
+        out.println("<div class='item-title'>" + (descriptionValueDisplay != null && !descriptionValueDisplay.isEmpty() ? descriptionValueDisplay : "Top #" + topIdValueDisplay) + "</div>");
+        out.println("<div class='item-meta'>");
+        out.println("<span>👤 Seller: " + sellerUsername + "</span> | ");
+        out.println("<span>" + genderValueDisplay + "</span> | ");
+        out.println("<span>Size: " + sizeValueDisplay + "</span> | ");
+        out.println("<span>Color: " + colorValueDisplay + "</span>");
+        out.println("</div>");
+        
+        out.println("<div style='margin: 1rem 0; padding: 1rem; background: var(--bg-light); border-radius: 8px;'>");
+        out.println("<p style='margin: 0.5rem 0;'><strong>📏 Measurements:</strong></p>");
+        out.println("<p style='margin: 0.25rem 0; color: var(--text-secondary);'>Front: " + frontLengthValueDisplay + "cm | Chest: " + chestLengthValueDisplay + "cm | Sleeve: " + sleeveLengthValueDisplay + "cm</p>");
+        out.println("</div>");
+        
+        out.println("<p style='margin: 0.5rem 0;'><strong>📝 Description:</strong> " + descriptionValueDisplay + "</p>");
+        out.println("<p style='margin: 0.5rem 0;'><strong>✨ Condition:</strong> " + conditionValueDisplay + "</p>");
+        
+        if (isSeller) {
+            if (minimumBidPriceValueDisplay != 0.0f) {
+                out.println("<div class='reserve-badge' style='display: inline-block; margin: 0.5rem 0;'>🔒 Reserve: $" + minimumBidPriceValueDisplay + " (Hidden)</div>");
+            } else {
+                out.println("<div class='reserve-badge' style='display: inline-block; margin: 0.5rem 0;'>No Reserve</div>");
+            }
         }
-
-        out.println("<p><strong>Starting or Current Bid Price: </strong>" + startingOrCurrentBidPriceValueDisplay + "</p>");
-        out.println("<p><strong>Auction Close Date: </strong>" + auctionCloseDateValueDisplay + "</p>");
-        out.println("<p><strong>Auction Close Time: </strong>" + auctionCloseTimeValueDisplay + "</p>");
-
-        // Show Similars form
+        
+        out.println("<div class='item-price'>Current Bid: $" + String.format("%.2f", startingOrCurrentBidPriceValueDisplay) + "</div>");
+        out.println("<p style='color: var(--text-secondary); font-size: 0.9rem;'><strong>⏰ Closes:</strong> " + auctionCloseDateValueDisplay + " at " + auctionCloseTimeValueDisplay + "</p>");
+        out.println("</div>");
+        
+        out.println("<div class='item-footer'>");
         out.println("<form method='get' action='tops.jsp' style='display:inline;'>");
         out.println("<input type='hidden' name='similarId' value='" + topIdValueDisplay + "'>");
         out.println("<input type='hidden' name='similarSize' value='" + (sizeValueDisplay != null ? sizeValueDisplay : "") + "'>");
         out.println("<input type='hidden' name='similarGender' value='" + (genderValueDisplay != null ? genderValueDisplay : "") + "'>");
         out.println("<input type='hidden' name='similarMinPrice' value='" + simMinPrice + "'>");
         out.println("<input type='hidden' name='similarMaxPrice' value='" + simMaxPrice + "'>");
-        out.println("<input type='submit' value='Show Similars'>");
+        out.println("<button type='submit' class='btn btn-outline' style='font-size: 0.9rem; padding: 0.5rem 1rem;'>🔍 Show Similars</button>");
         out.println("</form>");
+        
+        out.println("<button type='button' onclick='createBid(" + counter + ")' class='btn btn-primary' id='TopCreateBid" + counter + "' style='font-size: 0.9rem; padding: 0.5rem 1rem;'>💰 Place Bid</button>");
 
-        out.println("<input type='button' value='Create Bid' onclick='createBid(" + counter + ")' id='TopCreateBid" + counter + "' style='margin-left: 10px; margin-bottom: 100px;'>");
-
-        out.println("<form method='post' action='bidPage.jsp'>");
+        out.println("<form method='post' action='bidPage.jsp' style='margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);'>");
         out.println("<input type='hidden' name='topIdValue' value='" + topIdValueDisplay + "'>");
-        out.println("<label for='setNewBid' id='SetNewBidLabel" + counter + "' style='display: none;'>Set Bid (USD): </label>");
-        out.println("<input type='number' name='setNewBid' id='SetNewBid" + counter + "' style='display: none;' required>");
-        out.println("<label for='setAutomaticBid' id='SetAutomaticBidLabel" + counter + "' style='display: none;'>Set Automatic Bid: </label>");
-        out.println("<select name='setAutomaticBid' id='SetAutomaticBid" + counter + "' style='display: none;' required>");
-        out.println("<option value='selectAnItem' disabled selected>Select Item...</option>");
-        out.println("<option value='true' id='true'>Yes</option>");
-        out.println("<option value='false' id='false'>No</option>");
+        out.println("<div class='form-group' id='SetNewBidLabel" + counter + "' style='display: none;'>");
+        out.println("<label for='setNewBid" + counter + "'>Bid Amount (USD)</label>");
+        out.println("<input type='number' name='setNewBid' id='SetNewBid" + counter + "' class='form-control' step='0.01' min='" + startingOrCurrentBidPriceValueDisplay + "' required>");
+        out.println("</div>");
+        out.println("<div class='form-group' id='SetAutomaticBidLabel" + counter + "' style='display: none;'>");
+        out.println("<label for='setAutomaticBid" + counter + "'>Enable Automatic Bidding?</label>");
+        out.println("<select name='setAutomaticBid' id='SetAutomaticBid" + counter + "' class='form-control' required>");
+        out.println("<option value='selectAnItem' disabled selected>Select...</option>");
+        out.println("<option value='true'>Yes</option>");
+        out.println("<option value='false'>No</option>");
         out.println("</select>");
-        out.println("<label for='maxBidPrice' id='SetAutomaticBidPriceLabel" + counter + "' style='display: none;'>Set Max Bid Price (USD): </label>");
-        out.println("<input type='number' name='maxBidPrice' id='SetAutomaticBidPrice" + counter + "' style='display: none;'>");
-        out.println("<label for='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPriceLabel" + counter + "' style='display: none;'>Set Bid Increment Price (USD): </label>");
-        out.println("<input type='number' name='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPrice" + counter + "' style='display: none;'>");
-        out.println("<input type='button' value='Cancel Bid' onclick='removeBid(" + counter + ")' id='cancel" + counter + "' style='display: none;'>");
-        out.println("<input type='submit' value='Place Bid' onclick='placeBid(" + counter +")' id='TopPlaceBid" + counter + "' style='display: none;'>");
+        out.println("</div>");
+        out.println("<div class='form-group' id='SetAutomaticBidPriceLabel" + counter + "' style='display: none;'>");
+        out.println("<label for='maxBidPrice" + counter + "'>Maximum Bid (USD)</label>");
+        out.println("<input type='number' name='maxBidPrice' id='SetAutomaticBidPrice" + counter + "' class='form-control' step='0.01' min='0'>");
+        out.println("</div>");
+        out.println("<div class='form-group' id='SetAutomaticBidIncrementPriceLabel" + counter + "' style='display: none;'>");
+        out.println("<label for='SetAutomaticBidIncrementPrice" + counter + "'>Bid Increment (USD)</label>");
+        out.println("<input type='number' name='SetAutomaticBidIncrementPrice' id='SetAutomaticBidIncrementPrice" + counter + "' class='form-control' step='0.01' min='0'>");
+        out.println("</div>");
+        out.println("<div style='display: flex; gap: 0.5rem; margin-top: 1rem;'>");
+        out.println("<button type='button' onclick='removeBid(" + counter + ")' class='btn btn-outline' id='cancel" + counter + "' style='display: none;'>Cancel</button>");
+        out.println("<button type='submit' class='btn btn-primary' id='TopPlaceBid" + counter + "' style='display: none;'>Submit Bid</button>");
+        out.println("</div>");
         out.println("</form>");
+        out.println("</div>");
         out.println("</div>");
 
         counter++;
     }
 
     if (!found) {
-        out.println("<p>No tops found matching your criteria.</p>");
+        out.println("</div>"); // Close items-grid
+        out.println("<div class='card'>");
+        out.println("<p style='text-align: center; color: var(--text-secondary); font-size: 1.1rem;'>No tops found matching your criteria.</p>");
+        out.println("</div>");
+    } else {
+        out.println("</div>"); // Close items-grid
     }
 
     // show alerts from bidPage.jsp
@@ -317,3 +396,6 @@
     st.close();
     con.close();
 %>
+    </div>
+</body>
+</html>

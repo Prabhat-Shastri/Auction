@@ -4,14 +4,54 @@
 <%@ page import="jakarta.servlet.annotation.MultipartConfig" %>
 <%@ page import="java.time.LocalDate,java.time.LocalTime,java.time.LocalDateTime" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottoms - ThriftShop Auction</title>
+    <link rel="stylesheet" href="../css/auction-style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="mainPage.jsp" class="logo">🏛️ ThriftShop</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="tops.jsp">Tops</a></li>
+                    <li><a href="bottoms.jsp">Bottoms</a></li>
+                    <li><a href="shoes.jsp">Shoes</a></li>
+                    <li><a href="sellers.jsp">Sellers</a></li>
+                    <li><a href="notifications.jsp">Notifications</a></li>
+                    <li><a href="profile.jsp">Profile</a></li>
+                    <li><a href="../LoginPage/logout.jsp">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">👤 <%=session.getAttribute("username")%></div>
+        </div>
+    </header>
+    <div class="container">
 
 <%
     // Load MySQL Driver
     Class.forName("com.mysql.cj.jdbc.Driver");
 
     // Connect to DB
-    Connection con = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/thriftShop","root", "12345");
+    String jdbcUrl = System.getenv("JDBC_URL");
+    if (jdbcUrl == null || jdbcUrl.isEmpty()) {
+        String dbHost = System.getenv("DB_HOST");
+        String dbPort = System.getenv("DB_PORT");
+        String dbName = System.getenv("DB_NAME");
+        if (dbHost == null) dbHost = "localhost";
+        if (dbPort == null) dbPort = "3306";
+        if (dbName == null) dbName = "thriftShop";
+        jdbcUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
+    }
+    String dbUser = System.getenv("DB_USER");
+    if (dbUser == null) dbUser = "root";
+    String dbPass = System.getenv("DB_PASS");
+    if (dbPass == null) dbPass = "12345";
+    Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
     Statement st = con.createStatement();
 
     // Ensure user is logged in
@@ -19,10 +59,13 @@
         response.sendRedirect("../LoginPage/login.jsp");
         return;
     }
-
-    out.println("<h3>User: " + session.getAttribute("username") + "</h3>");
-    out.println("<a href='../WebsitePages/mainPage.jsp'>Main Page</a>");
-    out.println("<br/>This is the bottoms page<br/><br/>");
+%>
+        <div class="page-header">
+            <h1>👖 Bottoms</h1>
+            <p>Browse and bid on premium bottoms</p>
+            <a href="mainPage.jsp" class="btn btn-outline" style="margin-top: 1rem;">← Back to Main Page</a>
+        </div>
+<%
 
     // Get Show Similars parameters
     String similarId = request.getParameter("similarId");
@@ -149,6 +192,8 @@
 
     ResultSet rs = st.executeQuery(bottomsQuery.toString());
     boolean found = false;
+    
+    out.println("<div class='items-grid'>");
 
     // Display bottoms
     while (rs.next()) {
@@ -175,52 +220,70 @@
         double simMinPrice = Math.round(minBid * 0.9 * 100.0) / 100.0;
         double simMaxPrice = Math.round(minBid * 1.1 * 100.0) / 100.0;
 
-        out.println("<div style='margin-bottom: 100px;'>");
+        // Only show minimum bid price (reserve) to the seller who created the auction
+        Integer currentUserId = (Integer) session.getAttribute("userIdValue");
+        String sellerIdStr = rs.getString("auctionSellerIdValue");
+        boolean isSeller = (currentUserId != null && sellerIdStr != null && 
+                           currentUserId.toString().equals(sellerIdStr));
 
-        out.println("<p><strong>Seller:</strong> " + sellerUsername + "</p>");
-        out.println("<p><strong>Gender:</strong> " + genderVal + "</p>");
-        out.println("<p><strong>Size:</strong> " + sizeVal + "</p>");
-        out.println("<p><strong>Color:</strong> " + colorVal + "</p>");
-
-        out.println("<p><strong>Waist Length:</strong> " + waistVal + "</p>");
-        out.println("<p><strong>Inseam Length:</strong> " + inseamVal + "</p>");
-        out.println("<p><strong>Outseam Length:</strong> " + outseamVal + "</p>");
-        out.println("<p><strong>Hip Length:</strong> " + hipVal + "</p>");
-        out.println("<p><strong>Rise Length:</strong> " + riseVal + "</p>");
-
-        out.println("<p><strong>Description:</strong> " + descVal + "</p>");
-        out.println("<p><strong>Condition:</strong> " + condVal + "</p>");
-
-        if (minBid != 0.0f) {
-            out.println("<p><strong>Minimum Bid Price:</strong> " + minBid + "</p>");
-        } else {
-            out.println("<p><strong>Minimum Bid Price:</strong> None</p>");
+        out.println("<div class='item-card'>");
+        out.println("<div class='item-image'>👖</div>");
+        out.println("<div class='item-body'>");
+        out.println("<div class='item-title'>" + (descVal != null && !descVal.isEmpty() ? descVal : "Bottom #" + bottomIdVal) + "</div>");
+        out.println("<div class='item-meta'>");
+        out.println("<span>👤 Seller: " + sellerUsername + "</span> | ");
+        out.println("<span>" + genderVal + "</span> | ");
+        out.println("<span>Size: " + sizeVal + "</span> | ");
+        out.println("<span>Color: " + colorVal + "</span>");
+        out.println("</div>");
+        
+        out.println("<div style='margin: 1rem 0; padding: 1rem; background: var(--bg-light); border-radius: 8px;'>");
+        out.println("<p style='margin: 0.5rem 0;'><strong>📏 Measurements:</strong></p>");
+        out.println("<p style='margin: 0.25rem 0; color: var(--text-secondary);'>Waist: " + waistVal + "cm | Inseam: " + inseamVal + "cm | Outseam: " + outseamVal + "cm</p>");
+        out.println("<p style='margin: 0.25rem 0; color: var(--text-secondary);'>Hip: " + hipVal + "cm | Rise: " + riseVal + "cm</p>");
+        out.println("</div>");
+        
+        out.println("<p style='margin: 0.5rem 0;'><strong>📝 Description:</strong> " + descVal + "</p>");
+        out.println("<p style='margin: 0.5rem 0;'><strong>✨ Condition:</strong> " + condVal + "</p>");
+        
+        if (isSeller) {
+            if (minBid != 0.0f) {
+                out.println("<div class='reserve-badge' style='display: inline-block; margin: 0.5rem 0;'>🔒 Reserve: $" + minBid + " (Hidden)</div>");
+            } else {
+                out.println("<div class='reserve-badge' style='display: inline-block; margin: 0.5rem 0;'>No Reserve</div>");
+            }
         }
-
-        out.println("<p><strong>Starting or Current Bid Price:</strong> " + startOrCurrent + "</p>");
-        out.println("<p><strong>Auction Close Date:</strong> " + auctionDateVal + "</p>");
-        out.println("<p><strong>Auction Close Time:</strong> " + auctionTimeVal + "</p>");
-
-        // Show Similars form
+        
+        out.println("<div class='item-price'>Current Bid: $" + String.format("%.2f", startOrCurrent) + "</div>");
+        out.println("<p style='color: var(--text-secondary); font-size: 0.9rem;'><strong>⏰ Closes:</strong> " + auctionDateVal + " at " + auctionTimeVal + "</p>");
+        out.println("</div>");
+        
+        out.println("<div class='item-footer'>");
         out.println("<form method='get' action='bottoms.jsp' style='display:inline;'>");
         out.println("<input type='hidden' name='similarId' value='" + bottomIdVal + "'>");
         out.println("<input type='hidden' name='similarSize' value='" + (sizeVal != null ? sizeVal : "") + "'>");
         out.println("<input type='hidden' name='similarGender' value='" + (genderVal != null ? genderVal : "") + "'>");
         out.println("<input type='hidden' name='similarMinPrice' value='" + simMinPrice + "'>");
         out.println("<input type='hidden' name='similarMaxPrice' value='" + simMaxPrice + "'>");
-        out.println("<input type='submit' value='Show Similars'>");
+        out.println("<button type='submit' class='btn btn-outline' style='font-size: 0.9rem; padding: 0.5rem 1rem;'>🔍 Show Similars</button>");
         out.println("</form>");
-
+        out.println("</div>");
         out.println("</div>");
     }
 
     if (!found) {
-        out.println("<p>No bottoms found matching your criteria.</p>");
+        out.println("</div>"); // Close items-grid
+        out.println("<div class='card'>");
+        out.println("<p style='text-align: center; color: var(--text-secondary); font-size: 1.1rem;'>No bottoms found matching your criteria.</p>");
+        out.println("</div>");
+    } else {
+        out.println("</div>"); // Close items-grid
     }
-
-    out.println("<a href='../WebsitePages/profile.jsp'>Profile Page</a>");
 
     rs.close();
     st.close();
     con.close();
 %>
+    </div>
+</body>
+</html>

@@ -1,19 +1,50 @@
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <title>Register</title>
-    </head>
-
-    <body>
-        <h2>Create Account</h2>
-    <form action="<%=request.getContextPath()%>/register" method="POST">
-                            Username: <input type="text" name="username" required /> <br />
-                            Password: <input type="password" name="password" required /> <br />
-                            <input type="submit" value="Register" />
-                        </form>
-                            <br />
-                            <a href="login.jsp">Already have an account? Login here</a>
-    </body>
-
-    </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ThriftShop Auction</title>
+    <link rel="stylesheet" href="../css/auction-style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>🏛️ ThriftShop</h1>
+                <p>Join our premium auction platform</p>
+            </div>
+            
+            <form action="<%=request.getContextPath()%>/register" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" 
+                           id="username" 
+                           name="username" 
+                           class="form-control" 
+                           placeholder="Choose a username"
+                           required 
+                           autofocus>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" 
+                           id="password" 
+                           name="password" 
+                           class="form-control" 
+                           placeholder="Create a password"
+                           required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Create Account
+                </button>
+            </form>
+            
+            <div class="auth-link">
+                Already have an account? <a href="login.jsp">Sign in here</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

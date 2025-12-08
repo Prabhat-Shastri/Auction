@@ -1,0 +1,22 @@
+.auctions-section {
+  margin-top: 2rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.closed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
