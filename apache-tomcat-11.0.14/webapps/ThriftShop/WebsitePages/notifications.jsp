@@ -3,7 +3,6 @@
 <%@ page import="java.sql.*" %>
 
 <%
-    // check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -205,7 +204,6 @@
                 rsCurrentBid.close();
                 psCurrentBid.close();
 
-                // get item information from the correct table
                 String sqlItemInfo =
                         "select i.*, u.usernameValue as sellerUsername " +
                                 "from " + tableName + " i " +
@@ -269,14 +267,12 @@
                     out.println("<p>No bid information found for this item.</p>");
                 }
 
-                // view bid history button (uses itemType + itemIdValue)
                 out.println("<form method='get' action='bidHistory.jsp' style='margin-top:10px;'>");
                 out.println("<input type='hidden' name='itemType' value='" + itemTypeVal + "'/>");
                 out.println("<input type='hidden' name='itemIdValue' value='" + itemIdVal + "'/>");
                 out.println("<input type='submit' value='View Bid History'/>");
                 out.println("</form>");
 
-                // show bid form only when user is outbid
                 if (userBid != null && currentBid != null && userBid < currentBid) {
 
                     int localCounter = counterValue++;

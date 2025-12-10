@@ -125,7 +125,6 @@ public final class bidPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\n');
       out.write('\n');
 
-    // make sure user is logged in
     if (session.getAttribute("userIdValue") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -171,8 +170,6 @@ public final class bidPage_jsp extends org.apache.jasper.runtime.HttpJspBase
 
             if (setnewbid > currentBidPriceValue) {
 
-                // insert into incrementbids, not topsincrementbids
-                // and use itemTypeValue + itemIdValue
                 String insertSql =
                         "insert into incrementbids " +
                                 " (buyerIdValue, newBidValue, bidIncrementValue, bidMaxValue, " +
@@ -189,7 +186,6 @@ public final class bidPage_jsp extends org.apache.jasper.runtime.HttpJspBase
                 psInsert.executeUpdate();
                 psInsert.close();
 
-                // update current price on tops
                 String updateSql =
                         "update tops set startingOrCurrentBidPriceValue = ? " +
                                 "where topIdValue = ?";

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../css/auction-style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="mainPage.jsp" class="logo">🏛️ ThriftShop</a>
@@ -35,7 +34,6 @@
     <div class="container">
 
 <%
-    // load MySQL driver
     Class.forName("com.mysql.cj.jdbc.Driver");
     String jdbcUrl = System.getenv("JDBC_URL");
     if (jdbcUrl == null || jdbcUrl.isEmpty()) {
@@ -54,7 +52,6 @@
     Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
     Statement st = con.createStatement();
 
-    // check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -66,8 +63,6 @@
     <a href="mainPage.jsp" class="btn btn-outline" style="margin-top: 1rem;">← Back to Main Page</a>
 </div>
 <%
-
-    // Get Show Similars parameters
     String similarId = request.getParameter("similarId");
     String similarSize = request.getParameter("similarSize");
     String similarGender = request.getParameter("similarGender");
@@ -154,16 +149,14 @@
     }
 
     function placeBid(counter) {
-        // submit handled by bidPage.jsp
+
     }
 </script>
 
 <%
-    // handle new top auction submit
     String gender = request.getParameter("topGender");
     if (gender != null) {
 
-        // read date and time
         String dateStr = request.getParameter("AuctionCloseDateTops");
         String timeStr = request.getParameter("AuctionCloseTimeTops");
 
@@ -190,7 +183,6 @@
             return;
         }
 
-        // date and time are ok, read rest of fields
         Integer userIdValue = (Integer) session.getAttribute("userIdValue");
         String size = request.getParameter("topSize");
         String color = request.getParameter("topColor");
@@ -223,7 +215,6 @@
         st.executeUpdate(insertTopInformation);
     }
 
-    // Build query - with or without similarity filter
     StringBuilder topsQuery = new StringBuilder(
             "SELECT t.*, u.usernameValue AS sellerUsername " +
                     "FROM tops t " +
@@ -231,24 +222,23 @@
                     "WHERE 1=1");
 
     if (showingSimilar) {
-        // Filter by gender
         if (similarGender != null && !similarGender.isEmpty()) {
             String safeGender = similarGender.replace("'", "''");
             topsQuery.append(" AND t.genderValue = '").append(safeGender).append("'");
         }
-        // Filter by size
+
         if (similarSize != null && !similarSize.isEmpty()) {
             String safeSize = similarSize.replace("'", "''");
             topsQuery.append(" AND t.sizeValue = '").append(safeSize).append("'");
         }
-        // Filter by price range
+
         if (similarMinPrice != null && !similarMinPrice.isEmpty()) {
             topsQuery.append(" AND t.minimumBidPriceValue >= ").append(similarMinPrice);
         }
         if (similarMaxPrice != null && !similarMaxPrice.isEmpty()) {
             topsQuery.append(" AND t.minimumBidPriceValue <= ").append(similarMaxPrice);
         }
-        // Exclude the original item
+
         if (similarId != null && !similarId.isEmpty()) {
             topsQuery.append(" AND t.topIdValue != ").append(similarId);
         }
@@ -278,11 +268,9 @@
         String auctionCloseDateValueDisplay = rs.getString("auctionCloseDateValue");
         String auctionCloseTimeValueDisplay = rs.getString("auctionCloseTimeValue");
 
-        // Calculate price range for Show Similars (±10%)
         double simMinPrice = Math.round(minimumBidPriceValueDisplay * 0.9 * 100.0) / 100.0;
         double simMaxPrice = Math.round(minimumBidPriceValueDisplay * 1.1 * 100.0) / 100.0;
 
-        // Only show minimum bid price (reserve) to the seller who created the auction
         Integer currentUserId = (Integer) session.getAttribute("userIdValue");
         String sellerIdStr = rs.getString("auctionSellerIdValue");
         boolean isSeller = (currentUserId != null && sellerIdStr != null && 
@@ -365,15 +353,14 @@
     }
 
     if (!found) {
-        out.println("</div>"); // Close items-grid
+        out.println("</div>");
         out.println("<div class='card'>");
         out.println("<p style='text-align: center; color: var(--text-secondary); font-size: 1.1rem;'>No tops found matching your criteria.</p>");
         out.println("</div>");
     } else {
-        out.println("</div>"); // Close items-grid
+        out.println("</div>");
     }
 
-    // show alerts from bidPage.jsp
     String alertMessage = (String) session.getAttribute("alertMessage");
     if (alertMessage != null) {
         session.removeAttribute("alertMessage");

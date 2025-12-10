@@ -138,7 +138,6 @@ public final class searchResults_jsp extends org.apache.jasper.runtime.HttpJspBa
     String sortBy    = request.getParameter("sortBy");     // price, type
     String sortOrder = request.getParameter("sortOrder");  // asc, desc
 
-    // Parameters for "Show Similars" feature
     String similarTo = request.getParameter("similarTo");
     String similarId = request.getParameter("similarId");
     String similarSize = request.getParameter("similarSize");

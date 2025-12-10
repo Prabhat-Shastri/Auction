@@ -23,7 +23,6 @@
 <p>Click on a seller to view all their items:</p>
 
 <%
-    // Check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -44,7 +43,6 @@
     String dbPass = System.getenv("DB_PASS");
     if (dbPass == null) dbPass = "12345";
 
-    // Query for sellers who have items
     String query =
             "SELECT DISTINCT u.usernameValue, u.userIdValue " +
                     "FROM users u " +

@@ -21,7 +21,7 @@
 
 <%
     String itemType   = request.getParameter("itemType");     // tops, bottoms, shoes
-    String itemIdParam = request.getParameter("itemIdValue"); // id in that table
+    String itemIdParam = request.getParameter("itemIdValue");
 
     if (itemType == null || itemType.trim().isEmpty()
             || itemIdParam == null || itemIdParam.trim().isEmpty()) {
@@ -32,7 +32,6 @@
         itemType = itemType.trim();
         int itemIdValue = Integer.parseInt(itemIdParam);
 
-        // decide which table and id column to use
         String tableName;
         String idColumn;
 
@@ -77,7 +76,6 @@
                 if (dbPass == null) dbPass = "12345";
                 con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
 
-                // 1. get item info (tops or bottoms or shoes)
                 String sqlItem =
                         "select i.*, u.usernameValue as sellerUsername " +
                                 "from " + tableName + " i " +

@@ -147,7 +147,6 @@ public final class sellers_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<p>Click on a seller to view all their items:</p>\n");
       out.write("\n");
 
-    // Check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -168,7 +167,6 @@ public final class sellers_jsp extends org.apache.jasper.runtime.HttpJspBase
     String dbPass = System.getenv("DB_PASS");
     if (dbPass == null) dbPass = "12345";
 
-    // Query for sellers who have items
     String query =
             "SELECT DISTINCT u.usernameValue, u.userIdValue " +
                     "FROM users u " +
@@ -199,7 +197,6 @@ public final class sellers_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                 String sellerUsername = rs.getString("usernameValue");
 
-                // Always use itemType=any
                 String link =
                         "searchResults.jsp?itemType=any&searchSeller=" +
                                 java.net.URLEncoder.encode(sellerUsername, "UTF-8");

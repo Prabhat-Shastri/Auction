@@ -16,13 +16,13 @@
             <title>ThriftShop Auction - Main Page</title>
             <link rel="stylesheet" href="../css/auction-style.css">
             <script>
-                // Make functions available globally - defined in head so they're available immediately
+
                 function createAuction() {
-                    // Try to find existing modal first
+
                     var modal = document.getElementById('createAuctionModal');
                     
                     if (modal) {
-                        // Modal exists, just show it
+
                         modal.style.display = 'block';
                         modal.style.visibility = 'visible';
                         modal.style.opacity = '1';
@@ -37,7 +37,7 @@
                         return;
                     }
                     
-                    // If modal doesn't exist, find the form and create modal
+
                     var formDiv = document.getElementById('auctionFillOutForm');
                     if (!formDiv) {
                         // Try to find it by class
@@ -49,8 +49,7 @@
                         console.error('Could not find auctionFillOutForm or .auction-form');
                         return;
                     }
-                    
-                    // Create modal dynamically
+
                     modal = document.createElement('div');
                     modal.id = 'createAuctionModal';
                     modal.className = 'modal';
@@ -69,8 +68,7 @@
                     modalContent.appendChild(closeBtn);
                     modalContent.appendChild(formDiv.cloneNode(true));
                     modal.appendChild(modalContent);
-                    
-                    // Close on background click
+
                     modal.onclick = function(e) {
                         if (e.target === modal) {
                             closeAuctionModal();
@@ -114,7 +112,7 @@
             </script>
         </head>
         <body>
-            <!-- Header -->
+
             <header class="header">
                 <div class="header-container">
                     <a href="mainPage.jsp" class="logo">🏛️ ThriftShop</a>
@@ -133,14 +131,13 @@
                 </div>
             </header>
 
-            <!-- Main Content -->
+
             <div class="container">
                 <div class="page-header">
                     <h1>Welcome to ThriftShop</h1>
                     <p>Your premium auction marketplace for quality clothing</p>
                 </div>
-                
-                <!-- Action Buttons -->
+
                 <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
                     <button type="button" id="searchBtn" class="btn btn-secondary" style="cursor: pointer; min-width: 150px; color: white;">🔍 Search Items</button>
                     <button type="button" id="createAuctionBtn" onclick="createAuction(); return false;" class="btn btn-primary" style="cursor: pointer; min-width: 150px; color: #1a1f3a; font-weight: 600;">➕ Create Auction</button>
@@ -156,8 +153,7 @@
                             return false;
                         };
                     }
-                    
-                    // Close modal when clicking outside
+
                     var modal = document.getElementById('createAuctionModal');
                     if (modal) {
                         modal.onclick = function(e) {
@@ -166,8 +162,7 @@
                             }
                         };
                     }
-                    
-                    // Close modal with Escape key
+
                     document.addEventListener('keydown', function(e) {
                         if (e.key === 'Escape') {
                             closeAuctionModal();
@@ -181,8 +176,7 @@
                             toggleSearch();
                         }, false);
                     }
-                    
-                    // Search Form Toggling
+
                     var searchTypeSelect = document.getElementById('searchTypeSelect');
                     if (searchTypeSelect) {
                         searchTypeSelect.addEventListener("change", function () {
@@ -250,7 +244,6 @@
                 });
             </script>
 
-                <!-- Search Section -->
                 <div id="searchSection" class="search-section" style="display:none;">
                     <div class="card-header">
                         <h2 class="card-title">🔍 Search Items</h2>
@@ -265,7 +258,6 @@
                     <option value="shoes">Shoes</option>
                 </select>
 
-                <!-- Any item type search form -->
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="any">
                     <div id="searchFormAny" class="form-row" style="display: none;">
@@ -323,7 +315,6 @@
                     <button type="submit" class="btn btn-primary" id="searchAnySubmit" style="display: none; width: 100%;">Search All Items</button>
                 </form>
 
-                <!-- Tops search form -->
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="tops">
                     <div id="searchFormTops" class="form-row" style="display: none;">
@@ -402,7 +393,7 @@
                     <button type="submit" class="btn btn-primary" id="searchTopSubmit" style="display: none; width: 100%;">Search Tops</button>
                 </form>
 
-                <!-- Bottoms search form -->
+
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="bottoms">
                     <div id="searchFormBottoms" style="display: none;">
@@ -453,7 +444,6 @@
                     <button type="submit" class="btn btn-primary" id="searchBottomSubmit" style="display: none; width: 100%;">Search Bottoms</button>
                 </form>
 
-                <!-- Shoes search form -->
                 <form action="searchResults.jsp" method="POST">
                     <input type="hidden" name="itemType" value="shoes">
                     <div id="searchFormShoes" class="form-row" style="display: none;">
@@ -517,7 +507,7 @@
                 </form>
             </div>
 
-                <!-- Create Auction Modal -->
+
                 <div id="createAuctionModal" class="modal" style="display: none;">
                     <div class="modal-content">
                         <span class="modal-close" onclick="closeAuctionModal()">&times;</span>

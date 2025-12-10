@@ -123,7 +123,6 @@ public final class bidHistory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
 
-    // check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -157,7 +156,6 @@ public final class bidHistory_jsp extends org.apache.jasper.runtime.HttpJspBase
         itemType = itemType.trim();
         int itemIdValue = Integer.parseInt(itemIdParam);
 
-        // decide which table and id column to use
         String tableName;
         String idColumn;
 
@@ -189,7 +187,6 @@ public final class bidHistory_jsp extends org.apache.jasper.runtime.HttpJspBase
                 con = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/thriftShop", "root", "12345");
 
-                // 1. get item info (tops or bottoms or shoes)
                 String sqlItem =
                         "select i.*, u.usernameValue as sellerUsername " +
                                 "from " + tableName + " i " +
@@ -236,7 +233,6 @@ public final class bidHistory_jsp extends org.apache.jasper.runtime.HttpJspBase
                 if (rsItem != null) rsItem.close();
                 if (psItem != null) psItem.close();
 
-                // 2. get bid history for this item type and id
                 String sqlBids =
                         "select b.bidIdValue, b.newBidValue, b.bidIncrementValue, b.bidMaxValue, " +
                                 "       b.buyerIdValue, u.usernameValue as bidderUsername " +

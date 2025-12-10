@@ -54,7 +54,6 @@
     Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
     Statement st = con.createStatement();
 
-    // Ensure user is logged in
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -83,11 +82,11 @@
         out.println("<hr/>");
     }
 
-    // Handle bottoms submission
+
     String gender = request.getParameter("bottomGender");
     if (gender != null) {
 
-        // read date and time for bottoms
+
         String dateStr = request.getParameter("AuctionCloseDateBottoms");
         String timeStr = request.getParameter("AuctionCloseTimeBottoms");
 
@@ -114,7 +113,6 @@
             return;
         }
 
-        // if we are here, date and time are ok
         Integer userIdValue = (Integer) session.getAttribute("userIdValue");
         String size        = request.getParameter("bottomSize");
         String color       = request.getParameter("bottomColor");
@@ -137,8 +135,6 @@
             minimum = "0.0";
         }
 
-        // your bottoms form does not have StartingOrCurrentBidPrice
-        // so if missing or empty, use minimum as starting price
         if (startingorcurrentbidprice == null || startingorcurrentbidprice.isEmpty()) {
             startingorcurrentbidprice = minimum;
         }
@@ -157,7 +153,6 @@
         st.executeUpdate(insert);
     }
 
-    // Build query - with or without similarity filter
     StringBuilder bottomsQuery = new StringBuilder(
             "SELECT b.*, u.usernameValue AS sellerUsername " +
                     "FROM bottoms b " +
@@ -165,24 +160,23 @@
                     "WHERE 1=1");
 
     if (showingSimilar) {
-        // Filter by gender
+
         if (similarGender != null && !similarGender.isEmpty()) {
             String safeGender = similarGender.replace("'", "''");
             bottomsQuery.append(" AND b.genderValue = '").append(safeGender).append("'");
         }
-        // Filter by size
+
         if (similarSize != null && !similarSize.isEmpty()) {
             String safeSize = similarSize.replace("'", "''");
             bottomsQuery.append(" AND b.sizeValue = '").append(safeSize).append("'");
         }
-        // Filter by price range
         if (similarMinPrice != null && !similarMinPrice.isEmpty()) {
             bottomsQuery.append(" AND b.minimumBidPriceValue >= ").append(similarMinPrice);
         }
         if (similarMaxPrice != null && !similarMaxPrice.isEmpty()) {
             bottomsQuery.append(" AND b.minimumBidPriceValue <= ").append(similarMaxPrice);
         }
-        // Exclude the original item
+
         if (similarId != null && !similarId.isEmpty()) {
             bottomsQuery.append(" AND b.bottomIdValue != ").append(similarId);
         }
@@ -195,7 +189,7 @@
     
     out.println("<div class='items-grid'>");
 
-    // Display bottoms
+
     while (rs.next()) {
         found = true;
 
@@ -216,11 +210,10 @@
         String auctionDateVal   = rs.getString("auctionCloseDateValue");
         String auctionTimeVal   = rs.getString("auctionCloseTimeValue");
 
-        // Calculate price range for Show Similars (±10%)
+
         double simMinPrice = Math.round(minBid * 0.9 * 100.0) / 100.0;
         double simMaxPrice = Math.round(minBid * 1.1 * 100.0) / 100.0;
 
-        // Only show minimum bid price (reserve) to the seller who created the auction
         Integer currentUserId = (Integer) session.getAttribute("userIdValue");
         String sellerIdStr = rs.getString("auctionSellerIdValue");
         boolean isSeller = (currentUserId != null && sellerIdStr != null && 
@@ -272,12 +265,12 @@
     }
 
     if (!found) {
-        out.println("</div>"); // Close items-grid
+        out.println("</div>");
         out.println("<div class='card'>");
         out.println("<p style='text-align: center; color: var(--text-secondary); font-size: 1.1rem;'>No bottoms found matching your criteria.</p>");
         out.println("</div>");
     } else {
-        out.println("</div>"); // Close items-grid
+        out.println("</div>");
     }
 
     rs.close();

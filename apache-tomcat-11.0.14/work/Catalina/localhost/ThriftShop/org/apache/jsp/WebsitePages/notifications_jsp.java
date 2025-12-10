@@ -129,7 +129,6 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\n");
       out.write("\n");
 
-    // check login
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -250,7 +249,6 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
         try {
             int counterValue = 0;
 
-            // all items this user has ever bid on (by item type and item id)
             String sqlItems =
                     "select distinct itemTypeValue, itemIdValue " +
                             "from incrementbids " +
@@ -277,10 +275,9 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
 
             for (int i = 0; i < itemIds.size(); i++) {
 
-                String itemTypeVal = itemTypes.get(i);   // "tops", "bottoms", "shoes"
+                String itemTypeVal = itemTypes.get(i);
                 int itemIdVal = itemIds.get(i);
 
-                // get the column name for that table
                 String tableName;
                 String idColumn;
 
@@ -294,10 +291,9 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
                     tableName = "shoes";
                     idColumn  = "shoeIdValue";
                 } else {
-                    continue;  // skip unknown type
+                    continue;
                 }
 
-                // user last bid for this item
                 String sqlUserBid =
                         "select newBidValue " +
                                 "from incrementbids " +
@@ -316,7 +312,6 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
                 rsUserBid.close();
                 psUserBid.close();
 
-                // current highest bid for this item
                 String sqlCurrentBid =
                         "select newBidValue " +
                                 "from incrementbids " +
@@ -334,7 +329,6 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
                 rsCurrentBid.close();
                 psCurrentBid.close();
 
-                // get item information from the correct table
                 String sqlItemInfo =
                         "select i.*, u.usernameValue as sellerUsername " +
                                 "from " + tableName + " i " +
@@ -398,14 +392,12 @@ public final class notifications_jsp extends org.apache.jasper.runtime.HttpJspBa
                     out.println("<p>No bid information found for this item.</p>");
                 }
 
-                // view bid history button (uses itemType + itemIdValue)
                 out.println("<form method='get' action='bidHistory.jsp' style='margin-top:10px;'>");
                 out.println("<input type='hidden' name='itemType' value='" + itemTypeVal + "'/>");
                 out.println("<input type='hidden' name='itemIdValue' value='" + itemIdVal + "'/>");
                 out.println("<input type='submit' value='View Bid History'/>");
                 out.println("</form>");
 
-                // show bid form only when user is outbid
                 if (userBid != null && currentBid != null && userBid < currentBid) {
 
                     int localCounter = counterValue++;

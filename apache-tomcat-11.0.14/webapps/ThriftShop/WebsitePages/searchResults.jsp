@@ -10,11 +10,10 @@
 <hr />
 
 <%
-    String itemType  = request.getParameter("itemType");   // tops, bottoms, shoes, any
-    String sortBy    = request.getParameter("sortBy");     // price, type
-    String sortOrder = request.getParameter("sortOrder");  // asc, desc
+    String itemType  = request.getParameter("itemType");
+    String sortBy    = request.getParameter("sortBy");
+    String sortOrder = request.getParameter("sortOrder");
 
-    // Parameters for "Show Similars" feature
     String similarTo = request.getParameter("similarTo");
     String similarId = request.getParameter("similarId");
     String similarSize = request.getParameter("similarSize");

@@ -1,7 +1,6 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
 <%
-    // make sure user is logged in
     if (session.getAttribute("userIdValue") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -47,8 +46,7 @@
 
             if (setnewbid > currentBidPriceValue) {
 
-                // insert into incrementbids, not topsincrementbids
-                // and use itemTypeValue + itemIdValue
+                //use itemTypeValue + itemIdValue
                 String insertSql =
                         "insert into incrementbids " +
                                 " (buyerIdValue, newBidValue, bidIncrementValue, bidMaxValue, " +
@@ -65,7 +63,6 @@
                 psInsert.executeUpdate();
                 psInsert.close();
 
-                // update current price on tops
                 String updateSql =
                         "update tops set startingOrCurrentBidPriceValue = ? " +
                                 "where topIdValue = ?";

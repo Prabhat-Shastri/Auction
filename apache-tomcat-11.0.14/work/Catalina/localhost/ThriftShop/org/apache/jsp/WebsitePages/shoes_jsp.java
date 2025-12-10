@@ -169,7 +169,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <div class=\"container\">\n");
       out.write("\n");
 
-    // load MySQL driver
+
     Class.forName("com.mysql.cj.jdbc.Driver");
     String jdbcUrl = System.getenv("JDBC_URL");
     if (jdbcUrl == null || jdbcUrl.isEmpty()) {
@@ -188,7 +188,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
     Connection con = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
     Statement st = con.createStatement();
 
-    // check login
+
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../LoginPage/login.jsp");
         return;
@@ -202,7 +202,6 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
 
 
-    // Get Show Similars parameters
     String similarId = request.getParameter("similarId");
     String similarSize = request.getParameter("similarSize");
     String similarGender = request.getParameter("similarGender");
@@ -218,11 +217,10 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.println("<hr/>");
     }
 
-    // handle new shoe auction submit
+
     String gender = request.getParameter("shoeGender");
     if (gender != null) {
 
-        // read date and time
         String dateStr = request.getParameter("AuctionCloseDateShoes");
         String timeStr = request.getParameter("AuctionCloseTimeShoes");
 
@@ -249,7 +247,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
             return;
         }
 
-        // date and time are ok, read rest of fields
+
         Integer userIdValue = (Integer) session.getAttribute("userIdValue");
         String size        = request.getParameter("shoeSize");
         String color       = request.getParameter("shoeColor");
@@ -265,8 +263,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
             minimum = "0.0";
         }
 
-        // your form for shoes does not have StartingOrCurrentBidPrice
-        // so if it is missing or empty, use minimum as starting price
+
         if (startingorcurrentbidprice == null || startingorcurrentbidprice.isEmpty()) {
             startingorcurrentbidprice = minimum;
         }
@@ -283,7 +280,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
         st.executeUpdate(insert);
     }
 
-    // Build query - with or without similarity filter
+
     StringBuilder shoesQuery = new StringBuilder(
             "SELECT s.*, u.usernameValue AS sellerUsername " +
                     "FROM shoes s " +
@@ -291,24 +288,24 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
                     "WHERE 1=1");
 
     if (showingSimilar) {
-        // Filter by gender
+
         if (similarGender != null && !similarGender.isEmpty()) {
             String safeGender = similarGender.replace("'", "''");
             shoesQuery.append(" AND s.genderValue = '").append(safeGender).append("'");
         }
-        // Filter by size
+
         if (similarSize != null && !similarSize.isEmpty()) {
             String safeSize = similarSize.replace("'", "''");
             shoesQuery.append(" AND s.sizeValue = '").append(safeSize).append("'");
         }
-        // Filter by price range
+
         if (similarMinPrice != null && !similarMinPrice.isEmpty()) {
             shoesQuery.append(" AND s.minimumBidPriceValue >= ").append(similarMinPrice);
         }
         if (similarMaxPrice != null && !similarMaxPrice.isEmpty()) {
             shoesQuery.append(" AND s.minimumBidPriceValue <= ").append(similarMaxPrice);
         }
-        // Exclude the original item
+
         if (similarId != null && !similarId.isEmpty()) {
             shoesQuery.append(" AND s.shoeIdValue != ").append(similarId);
         }
@@ -321,7 +318,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
     
     out.println("<div class='items-grid'>");
 
-    // display shoes
+
     while (rs.next()) {
         found = true;
 
@@ -337,11 +334,11 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
         String auctionDateVal  = rs.getString("auctionCloseDateValue");
         String auctionTimeVal  = rs.getString("auctionCloseTimeValue");
 
-        // Calculate price range for Show Similars (±10%)
+
         double simMinPrice = Math.round(minBid * 0.9 * 100.0) / 100.0;
         double simMaxPrice = Math.round(minBid * 1.1 * 100.0) / 100.0;
 
-        // Only show minimum bid price (reserve) to the seller who created the auction
+
         Integer currentUserId = (Integer) session.getAttribute("userIdValue");
         String sellerIdStr = rs.getString("auctionSellerIdValue");
         boolean isSeller = (currentUserId != null && sellerIdStr != null && 
@@ -392,7 +389,7 @@ public final class shoes_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.println("<p style='text-align: center; color: var(--text-secondary); font-size: 1.1rem;'>No shoes found matching your criteria.</p>");
         out.println("</div>");
     } else {
-        out.println("</div>"); // Close items-grid
+        out.println("</div>");
     }
 
     rs.close();
